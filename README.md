@@ -5,7 +5,7 @@ RA Widgets Bundle is a collection of widgets that uses the SiteOrigin Widgets AP
 ## Installation
 
 1. Download latest release from [GitHub](https://github.com/webdevsuperfast/ra-widgets-bundle/releases) repository.
-2. Extract and rename it to `recommendwp-widgets`.
+2. Extract and rename it to `ra-widgets-bundle`.
 3. Copy or move the folder to your `plugins` folder.
 4. Activate. [SiteOrigin Widgets Bundle](https://wordpress.org/plugins/so-widgets-bundle/) must be installed and activated first.
 
