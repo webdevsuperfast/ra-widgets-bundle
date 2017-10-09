@@ -1,18 +1,18 @@
 <?php
 /*
-Widget Name: RWP Headline
+Widget Name: RA Headline
 Description: A simple headline widget.
-Author: RecommendWP
-Author URI: http://www.recommendwp.com
+Author: Rotsen Mark Acob
+Author URI: http://rotsenacob.com
 */
 
-class RWP_Headline_Widget extends SiteOrigin_Widget {
+class RA_Headline_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'rwpw-headline',
-			__( 'RWP Headline', 'recommendwp-widgets' ),
+			'rawb-headline',
+			__( 'RA Headline', 'ra-widgets-bundle' ),
 			array(
-				'description' => __( 'A simple headline widget.', 'recommendwp-widgets' ),
+				'description' => __( 'A simple headline widget.', 'ra-widgets-bundle' ),
 			),
 			array(),
 			false,
@@ -27,19 +27,19 @@ class RWP_Headline_Widget extends SiteOrigin_Widget {
 		return array(
 			'title' => array(
 				'type' => 'text',
-				'label' => __( 'Title', 'recommendwp-widgets' )
+				'label' => __( 'Title', 'ra-widgets-bundle' )
 			),
 			'subtitle' => array(
 				'type' => 'text',
-				'label' => __( 'Subtitle', 'recommendwp-widgets' )
+				'label' => __( 'Subtitle', 'ra-widgets-bundle' )
 			),
 			'class' => array(
 				'type' => 'text',
-				'label' => __( 'Class', 'recommendwp-widgets' )
+				'label' => __( 'Class', 'ra-widgets-bundle' )
 			),
 			'template' => array(
 				'type' => 'select',
-				'label' => __( 'Headline Template', 'recommendwp-widgets' ),
+				'label' => __( 'Headline Template', 'ra-widgets-bundle' ),
 				'options' => array(
 					'default' => 'Default',
 				),
@@ -70,4 +70,4 @@ class RWP_Headline_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'rwpw-headline', __FILE__, 'RWP_Headline_Widget' );
+siteorigin_widget_register( 'rawb-headline', __FILE__, 'RA_Headline_Widget' );

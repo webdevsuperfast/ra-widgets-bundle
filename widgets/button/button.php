@@ -1,18 +1,18 @@
 <?php
 /*
-Widget Name: RWP Button
+Widget Name: RA Button
 Description: A simple button widget.
-Author: RecommendWP
-Author URI: http://www.recommendwp.com
+Author: Rotsen Mark Acob
+Author URI: http://rotsenacob.com
 */
 
-class RWP_Button_Widget extends SiteOrigin_Widget {
+class RA_Button_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
-            'rwpw-button',
-            __( 'RWP Button', 'recommendwp-widgets' ),
+            'rawb-button',
+            __( 'RA Button', 'ra-widgets-bundle' ),
             array(
-                'description' => __( 'A simple button widget', 'recommendwp-widgets' ),
+                'description' => __( 'A simple button widget', 'ra-widgets-bundle' ),
             ),
             array(
 
@@ -30,19 +30,19 @@ class RWP_Button_Widget extends SiteOrigin_Widget {
         return array(
         	'text' => array(
         		'type' => 'text',
-        		'label' => __( 'Button text', 'recommendwp-widgets' ),
+        		'label' => __( 'Button text', 'ra-widgets-bundle' ),
         	),
         	'class' => array(
         		'type' => 'text',
-        		'label' => __( 'Button class', 'recommendwp-widgets' ),
+        		'label' => __( 'Button class', 'ra-widgets-bundle' ),
     		),
 			'url' => array(
 				'type' => 'link',
-				'label' => __( 'URL', 'recommendwp-widgets' )
+				'label' => __( 'URL', 'ra-widgets-bundle' )
 			),
 			'target' => array(
 				'type' => 'select',
-				'label' => __( 'Target', 'recommendwp-widgets' ),
+				'label' => __( 'Target', 'ra-widgets-bundle' ),
 				'default' => '_self',
 				'options' => array(
 					'_self' => 'Self',
@@ -51,8 +51,8 @@ class RWP_Button_Widget extends SiteOrigin_Widget {
 			),
 			'attributes' => array(
 				'type' => 'repeater',
-				'label' => __('Add Attribute', 'recommendwp-widgets'),
-				'item_name' => __('Attribute', 'recommendwp-widgets'),
+				'label' => __('Add Attribute', 'ra-widgets-bundle'),
+				'item_name' => __('Attribute', 'ra-widgets-bundle'),
 				'item_label' => array(
 					'selector' => "[id*='attribute']",
 					'update_event' => 'change',
@@ -61,137 +61,137 @@ class RWP_Button_Widget extends SiteOrigin_Widget {
 				'fields' => array(
 					'attribute' => array(
 						'type' => 'text',
-						'label' => __( 'Attribute', 'recommendwp-widgets' ),
+						'label' => __( 'Attribute', 'ra-widgets-bundle' ),
 						'default' => ''
 					),
 					'value' => array(
 						'type' => 'text',
-						'label' => __('Value', 'recommendwp-widgets'),
+						'label' => __('Value', 'ra-widgets-bundle'),
 						'default' => '',
 					)
 				)
 			),
         	'settings' => array(
         		'type' => 'section',
-        		'label' => __( 'Button Settings', 'recommendwp-widgets' ),
+        		'label' => __( 'Button Settings', 'ra-widgets-bundle' ),
         		'hide' => true,
         		'fields' => array(
         			'design' => array(
         				'type' => 'select',
-        				'label' => __( 'Design', 'recommendwp-widgets' ),
+        				'label' => __( 'Design', 'ra-widgets-bundle' ),
         				'options' => array(
-        					'flat' => __( 'Flat', 'recommendwp-widgets' ),
-        					'wire' => __( 'Wire', 'recommendwp-widgets' ),
-        					'rounded' => __( 'Rounded', 'recommendwp-widgets' ),
-                            'none' => __( 'None', 'recommendwp-widgets' )
+        					'flat' => __( 'Flat', 'ra-widgets-bundle' ),
+        					'wire' => __( 'Wire', 'ra-widgets-bundle' ),
+        					'rounded' => __( 'Rounded', 'ra-widgets-bundle' ),
+                            'none' => __( 'None', 'ra-widgets-bundle' )
         				),
         				'default' => 'rounded'
         			),
         			'background' => array(
         				'type' => 'color',
-        				'label' => __( 'Background color', 'recommendwp-widgets' ),
+        				'label' => __( 'Background color', 'ra-widgets-bundle' ),
         			),
         			'background_hover' => array(
         				'type' => 'color',
-        				'label' => __( 'Background hover color', 'recommendwp-widgets' )
+        				'label' => __( 'Background hover color', 'ra-widgets-bundle' )
         			),
 					'text_size' => array(
 						'type' => 'number',
-						'label' => __( 'Text size', 'recommendwp-widgets' ),
+						'label' => __( 'Text size', 'ra-widgets-bundle' ),
 						'default' => '16'
 					),
         			'text_color' => array(
         				'type' => 'color',
-        				'label' => __( 'Text color', 'recommendwp-widgets' ),
+        				'label' => __( 'Text color', 'ra-widgets-bundle' ),
         				'default' => '#fff'
         			),
         			'text_hover' => array(
         				'type' => 'color',
-        				'label' => __( 'Text hover color', 'recommendwp-widgets' ),
+        				'label' => __( 'Text hover color', 'ra-widgets-bundle' ),
         				'default' => '#fff'
         			),
         			'border' => array(
         				'type' => 'number',
-        				'label' => __( 'Border Size', 'recommendwp-widgets' ),
+        				'label' => __( 'Border Size', 'ra-widgets-bundle' ),
         				'default' => '1'
         			),
         			'border_radius' => array(
         				'type' => 'number',
-        				'label' => __( 'Border radius', 'recommendwp-widgets' ),
+        				'label' => __( 'Border radius', 'ra-widgets-bundle' ),
         				'default' => '3'
         			),
 					'padding' => array(
 						'type' => 'number',
-						'label' => __( 'Top &amp; Bottom Padding', 'recommendwp-widgets' ),
+						'label' => __( 'Top &amp; Bottom Padding', 'ra-widgets-bundle' ),
 						'default' => ''
 					),
 					'width' => array(
 						'type' => 'number',
-						'label' => __( 'Width', 'recommendwp-widgets' )
+						'label' => __( 'Width', 'ra-widgets-bundle' )
 					)
         		)
         	),
         	'icon' => array(
         		'type' => 'section',
-        		'label' => __( 'Icon settings', 'recommendwp-widgets' ),
+        		'label' => __( 'Icon settings', 'ra-widgets-bundle' ),
         		'hide' => true,
         		'fields' => array(
         			'icon' => array(
         				'type' => 'icon',
-        				'label' => __( 'Button icon', 'recommendwp-widgets' )
+        				'label' => __( 'Button icon', 'ra-widgets-bundle' )
         			),
         			'size' => array(
         				'type' => 'number',
-        				'label' => __( 'Icon size', 'recommendwp-widgets' ),
+        				'label' => __( 'Icon size', 'ra-widgets-bundle' ),
         				'default' => '16'
         			),
 					'color' => array(
 						'type' => 'color',
-						'label' => __( 'Color', 'recommendwp-widgets' ),
+						'label' => __( 'Color', 'ra-widgets-bundle' ),
 						'default' => '#fff'
 					),
 					'color_hover' => array(
 						'type' => 'color',
-						'label' => __( 'Color hover', 'recommendwp-widgets' ),
+						'label' => __( 'Color hover', 'ra-widgets-bundle' ),
 						'default' => '#fff'
 					),
         			'position' => array(
         				'type' => 'select',
-        				'label' => __( 'Icon position', 'recommendwp-widgets' ),
+        				'label' => __( 'Icon position', 'ra-widgets-bundle' ),
         				'default' => 'left',
         				'options' => array(
-        					'left' => __( 'Left', 'recommendwp-widgets' ),
-        					'right' => __( 'Right', 'recommendwp-widgets' ),
-							'center' => __( 'Center', 'recommendwp-widgets' )
+        					'left' => __( 'Left', 'ra-widgets-bundle' ),
+        					'right' => __( 'Right', 'ra-widgets-bundle' ),
+							'center' => __( 'Center', 'ra-widgets-bundle' )
         				)
         			)
         		)
         	),
 			'popup' => array(
 				'type' => 'section',
-				'label' => __( 'Popup', 'recommendwp-widgets' ),
+				'label' => __( 'Popup', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'type' => array(
 						'type' => 'select',
-						'label' => __( 'Type', 'recommendwp-widgets' ),
+						'label' => __( 'Type', 'ra-widgets-bundle' ),
 						'default' => 'none',
 						'options' => array(
-							'none' => __( 'None', 'recommendwp-widgets' ),
-							'ajax' => __( 'Ajax', 'recommendwp-widgets' ),
-							'image' => __( 'Image', 'recommendwp-widgets' ),
-							'inline' => __( 'Inline', 'recommendwp-widgets' ),
-							'iframe' => __( 'iFrame', 'recommendwp-widgets' )
+							'none' => __( 'None', 'ra-widgets-bundle' ),
+							'ajax' => __( 'Ajax', 'ra-widgets-bundle' ),
+							'image' => __( 'Image', 'ra-widgets-bundle' ),
+							'inline' => __( 'Inline', 'ra-widgets-bundle' ),
+							'iframe' => __( 'iFrame', 'ra-widgets-bundle' )
 						)
 					),
 				)
 			),
 			'template' => array(
 				'type' => 'select',
-				'label' => __( 'Template', 'recommendwp-widgets' ),
+				'label' => __( 'Template', 'ra-widgets-bundle' ),
 				'default' => 'none',
 				'options' => array(
-					'default' => __( 'Default', 'recommendwp-widgets' ),
+					'default' => __( 'Default', 'ra-widgets-bundle' ),
 				)
 			)
         );
@@ -277,4 +277,4 @@ class RWP_Button_Widget extends SiteOrigin_Widget {
     }
 }
 
-siteorigin_widget_register( 'rwpw-button', __FILE__, 'RWP_Button_Widget' );
+siteorigin_widget_register( 'rawb-button', __FILE__, 'RA_Button_Widget' );

@@ -12,8 +12,8 @@
 				setTimeout(fn, 500);
 			}
 			// Image Carousel
-            if( $('.rwpw-image-carousel').length > 0 ) {
-                $('.rwpw-image-carousel').each(function(index){
+            if( $('.rawb-image-carousel').length > 0 ) {
+                $('.rawb-image-carousel').each(function(index){
                     var instance = $(this).data('instance');
                     slideshowInstance(instance);
                 });
@@ -85,8 +85,8 @@
             }
 
             // Video Carousel
-            if( $('.rwpw-video-carousel').length > 0 ) {
-                $('.rwpw-video-carousel').each(function(index){
+            if( $('.rawb-video-carousel').length > 0 ) {
+                $('.rawb-video-carousel').each(function(index){
                     var instance = $(this).data('instance');
                     videoInstance(instance);
                 });
@@ -151,8 +151,8 @@
             }
 
             // Testimonial
-            if ($('.rwpw-testimonial').length > 0) {
-                $('.rwpw-testimonial').each(function (index) {
+            if ($('.rawb-testimonial').length > 0) {
+                $('.rawb-testimonial').each(function (index) {
                     var instance = $(this).data('instance');
                     testimonialInstance(instance);
                 });
@@ -210,8 +210,8 @@
             }
 
             // Post Carousel
-            if ($('.rwpw-post-carousel').length > 0) {
-                $('.rwpw-post-carousel').each(function (index) {
+            if ($('.rawb-post-carousel').length > 0) {
+                $('.rawb-post-carousel').each(function (index) {
                     var instance = $(this).data('instance');
                     carouselInstance(instance);
                 });
@@ -269,8 +269,8 @@
             }
 
             // Popup
-            if($('.rwpw-popup').length > 0) {
-                $('.rwpw-popup').each(function(){
+            if($('.rawb-popup').length > 0) {
+                $('.rawb-popup').each(function(){
                     $(this).on('click', function(e) {
                         e.preventDefault();
                         e.stopPropagation();

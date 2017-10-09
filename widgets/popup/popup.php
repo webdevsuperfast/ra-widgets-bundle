@@ -1,18 +1,18 @@
 <?php
 /*
-Widget Name: RWP Popup
+Widget Name: RA Popup
 Description: A simple popup widget.
-Author: RecommendWP
-Author URI: http://www.recommendwp.com
+Author: Rotsen Mark Acob
+Author URI: http://rotsenacob.com
 */
 
-class RWP_Popup_Widget extends SiteOrigin_Widget {
+class RA_Popup_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
-            'rwpw-popup',
-            __( 'RWP Popup', 'recommendwp-widgets' ),
+            'rawb-popup',
+            __( 'RA Popup', 'ra-widgets-bundle' ),
             array(
-                'description' => __( 'A simple popup content builder to be used together with the RWP Button Widget', 'recommendwp-widgets' ),
+                'description' => __( 'A simple popup content builder to be used together with the RA Button Widget', 'ra-widgets-bundle' ),
                 'help' => ''
             ),
             array(),
@@ -25,69 +25,69 @@ class RWP_Popup_Widget extends SiteOrigin_Widget {
 		return array(
 			'title' => array(
 				'type' => 'text',
-				'label' => __('Title', 'recommendwp-widgets'),
+				'label' => __('Title', 'ra-widgets-bundle'),
 				'default' => ''
 			),
 			'id' => array(
 				'type' => 'text',
-				'label' => __( 'ID', 'recommendwp-widgets' ),
+				'label' => __( 'ID', 'ra-widgets-bundle' ),
 			),
             'class' => array(
                 'type' => 'text',
-                'label' => __( 'Class', 'recommendwp-widgets' )
+                'label' => __( 'Class', 'ra-widgets-bundle' )
             ),
             'image' => array(
                 'type' => 'widget',
-                'label' => __( 'Image', 'recommendwp-widgets' ),
-                'class' => 'RWP_Image_Widget'
+                'label' => __( 'Image', 'ra-widgets-bundle' ),
+                'class' => 'RA_Image_Widget'
             ),
             'content' => array(
                 'type' => 'widget',
-                'label' => __( 'Content', 'recommendwp-widgets' ),
+                'label' => __( 'Content', 'ra-widgets-bundle' ),
                 'class' => 'SiteOrigin_Widget_Editor_Widget'
             ),
             'design' => array(
                 'type' => 'section',
-                'label' => __( 'Design', 'recommendwp-widgets' ),
+                'label' => __( 'Design', 'ra-widgets-bundle' ),
                 'fields' => array(
                     'width' => array(
                         'type' => 'number',
-                        'label' => __( 'Popup Width', 'recommendwp-widgets' ),
+                        'label' => __( 'Popup Width', 'ra-widgets-bundle' ),
                         'default' => 740
                     ),
                     'background' => array(
                         'type' => 'color',
-                        'label' => __( 'Background', 'recommendwp-widgets' ),
+                        'label' => __( 'Background', 'ra-widgets-bundle' ),
                         'default' => '#fff'
                     )
                 )
             ),
             'settings' => array(
             	'type' => 'section',
-            	'label' => __( 'Settings', 'recommendwp-widgets' ),
+            	'label' => __( 'Settings', 'ra-widgets-bundle' ),
             	'fields' => array(
                     'display_title' => array(
                         'type' => 'checkbox',
-                        'label' => __( 'Display Title', 'recommendwp-widgets' ),
+                        'label' => __( 'Display Title', 'ra-widgets-bundle' ),
                         'default' => true
                     ),
             		'display_image' => array(
             			'type' => 'checkbox',
-            			'label' => __( 'Display Image', 'recommendwp-widgets' ),
+            			'label' => __( 'Display Image', 'ra-widgets-bundle' ),
             			'default' => true
             		),
                     'display_content' => array(
                         'type' => 'checkbox',
-            			'label' => __( 'Display Content', 'recommendwp-widgets' ),
+            			'label' => __( 'Display Content', 'ra-widgets-bundle' ),
             			'default' => true
                     ),
             	)
             ),
 			'template' => array(
 				'type' => 'select',
-				'label' => __( 'Choose template', 'recommendwp-widgets' ),
+				'label' => __( 'Choose template', 'ra-widgets-bundle' ),
 				'options' => array(
-					'default' => __( 'Default', 'recommendwp-widgets' )
+					'default' => __( 'Default', 'ra-widgets-bundle' )
 				),
 				'default' => 'default'
 			)
@@ -120,7 +120,7 @@ class RWP_Popup_Widget extends SiteOrigin_Widget {
 	}
 
     function modify_child_widget_form( $child_widget_form, $child_widget ) {
-        if ( get_class( $child_widget ) == 'RWP_Image_Widget' ) {
+        if ( get_class( $child_widget ) == 'RA_Image_Widget' ) {
             unset( $child_widget_form['settings']['fields']['alignment'] );
             unset( $child_widget_form['title'] );
             unset( $child_widget_form['content'] );
@@ -135,4 +135,4 @@ class RWP_Popup_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'rwpw-popup', __FILE__, 'RWP_Popup_Widget' );
+siteorigin_widget_register( 'rawb-popup', __FILE__, 'RA_Popup_Widget' );

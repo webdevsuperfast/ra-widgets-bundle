@@ -20,7 +20,7 @@ if ( $id ) {
 // $attachment = wp_get_attachment_image_src( $image, 'full' );
 if ( $image ) {
 	$attachment = wp_get_attachment_image_src( $image, 'full' );
-	$attributes['src'] = rwpw_thumb( $attachment[0], $width, $height, true );
+	$attributes['src'] = rawb_thumb( $attachment[0], $width, $height, true );
 }
 
 if ( $target == true ) :

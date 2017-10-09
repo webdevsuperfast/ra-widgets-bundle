@@ -9,7 +9,7 @@ $widget_id = preg_replace( '/[^0-9]/', '', $widget_id );
 $attributes = array();
 
 $classes = array();
-$classes[] = 'rwpw-testimonial';
+$classes[] = 'rawb-testimonial';
 $classes[] = 'owl-carousel';
 $classes[] = 'owl-theme';
 $classes[] = $class;
@@ -49,16 +49,16 @@ $loop = new WP_Query( $post_args ); ?>
 
 <?php if ( $loop->have_posts() ) : ?>
     <?php
-    wp_enqueue_script( 'rwpw-owl-carousel-js' );
-    wp_enqueue_script( 'rwpw-widgets-js' );
-    wp_localize_script('rwpw-widgets-js', 'testimonial' . (int)$widget_id, $vars );
+    wp_enqueue_script( 'rawb-owl-carousel-js' );
+    wp_enqueue_script( 'rawb-widgets-js' );
+    wp_localize_script('rawb-widgets-js', 'testimonial' . (int)$widget_id, $vars );
     ?>
 
     <div <?php foreach( $attributes as $name => $value ) echo $name . '="' . $value . '" ' ?>>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <?php 
-        $thumbnail = rwpw_post_image();
-        $thumb = rwpw_thumb( $thumbnail, $width, $height ); 
+        $thumbnail = rawb_post_image();
+        $thumb = rawb_thumb( $thumbnail, $width, $height ); 
         ?>
                 
         <div class="testimonial-wrapper">
@@ -71,7 +71,7 @@ $loop = new WP_Query( $post_args ); ?>
                 <div class="testimonial-content">
                     <div class="content-wrap">
                         <?php echo wpautop( get_the_content(), false); ?>
-                        <?php echo '<h4>' . apply_filters( 'rwpw_testimonial_title', get_the_title(), $postid ) . '</h4>'; ?>
+                        <?php echo '<h4>' . apply_filters( 'rawb_testimonial_title', get_the_title(), $postid ) . '</h4>'; ?>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@ $loop = new WP_Query( $post_args ); ?>
     <?php endwhile; ?>
 
     <?php else : ?>
-        <?php echo __( 'No testimonials found.', 'recommendwp-widgets' ); ?>
+        <?php echo __( 'No testimonials found.', 'ra-widgets-bundle' ); ?>
 
     </div>
     <?php endif; ?>

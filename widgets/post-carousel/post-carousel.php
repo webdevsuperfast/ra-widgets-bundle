@@ -1,18 +1,18 @@
 <?php
 /*
-Widget Name: RWP Post Carousel
+Widget Name: RA Post Carousel
 Description: A simple post carousel widget.
-Author: RecommendWP
-Author URI: http://www.recommendwp.com
+Author: Rotsen Mark Acob
+Author URI: http://rotsenacob.com
 */
 
-class RWP_Post_Carousel_Widget extends SiteOrigin_Widget {
+class RA_Post_Carousel_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
-            'rwpw-post-carousel',
-            __( 'RWP Post Carousel', 'recommendwp-widgets' ),
+            'rawb-post-carousel',
+            __( 'RA Post Carousel', 'ra-widgets-bundle' ),
             array(
-                'description' => __( 'A simple post carousel widget', 'recommendwp-widgets' ),
+                'description' => __( 'A simple post carousel widget', 'ra-widgets-bundle' ),
                 'help' => ''
             ),
             array(),
@@ -29,20 +29,20 @@ class RWP_Post_Carousel_Widget extends SiteOrigin_Widget {
     	return array(
 			'title' => array(
 				'type' => 'text',
-				'label' => __('Title', 'recommendwp-widgets'),
+				'label' => __('Title', 'ra-widgets-bundle'),
 				'default' => ''
 			),
 			'class' => array(
 				'type' => 'text',
-				'label' => __( 'Class', 'recommendwp-widgets' )
+				'label' => __( 'Class', 'ra-widgets-bundle' )
 			),
 			'post' => array(
 				'type' => 'posts',
-				'label' => __( 'Post Query', 'recommendwp-widgets' )
+				'label' => __( 'Post Query', 'ra-widgets-bundle' )
 			),
 			'slideshow' => array(
 				'type' => 'section',
-				'label' => __( 'Slideshow Settings', 'recommendwp-widgets' ),
+				'label' => __( 'Slideshow Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'slides' => array(
@@ -109,26 +109,26 @@ class RWP_Post_Carousel_Widget extends SiteOrigin_Widget {
 			),
 			'responsive' => array(
 				'type' => 'section',
-				'label' => __( 'Responsive Settings', 'recommendwp-widgets' ),
+				'label' => __( 'Responsive Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'mobile' => array(
 						'type' => 'number',
-						'label' => __( 'Slides for mobile', 'recommendwp-widgets' ),
+						'label' => __( 'Slides for mobile', 'ra-widgets-bundle' ),
 						'default' => 1
 					),
 					'tablet' => array(
 						'type' => 'number',
-						'label' => __( 'Slides for tablets', 'recommendwp-widgets' ),
+						'label' => __( 'Slides for tablets', 'ra-widgets-bundle' ),
 						'default' => 1
 					),
 				)
 			),
 			'template' => array(
 				'type' => 'select',
-				'label' => __( 'Choose template', 'recommendwp-widgets' ),
+				'label' => __( 'Choose template', 'ra-widgets-bundle' ),
 				'options' => array(
-					'default' => __( 'Default', 'recommendwp-widgets' )
+					'default' => __( 'Default', 'ra-widgets-bundle' )
 				),
 				'default' => 'default'
 			)
@@ -168,4 +168,4 @@ class RWP_Post_Carousel_Widget extends SiteOrigin_Widget {
     }
 }
 
-siteorigin_widget_register( 'rwpw-post-carousel', __FILE__, 'RWP_Post_Carousel_Widget' );
+siteorigin_widget_register( 'rawb-post-carousel', __FILE__, 'RA_Post_Carousel_Widget' );

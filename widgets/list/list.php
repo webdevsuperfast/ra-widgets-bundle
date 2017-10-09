@@ -1,18 +1,18 @@
 <?php
 /*
-Widget Name: RWP Lists
+Widget Name: RA Lists
 Description: A simple list widget.
-Author: RecommendWP
-Author URI: http://www.recommendwp.com
+Author: Rotsen Mark Acob
+Author URI: http://rotsenacob.com
 */
 
 class List_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
-            'rwpw-lists',
-            __( 'RWP Lists', 'recommendwp-widgets' ),
+            'rawb-lists',
+            __( 'RA Lists', 'ra-widgets-bundle' ),
             array(
-                'description' => __( 'A simple list widget', 'recommendwp-widgets' ),
+                'description' => __( 'A simple list widget', 'ra-widgets-bundle' ),
                 'help' => ''
             ),
             array(),
@@ -25,17 +25,17 @@ class List_Widget extends SiteOrigin_Widget {
 		return array(
 			'title' => array(
 				'type' => 'text',
-				'label' => __('Title', 'recommendwp-widgets'),
+				'label' => __('Title', 'ra-widgets-bundle'),
 				'default' => ''
 			),
 			'class' => array(
 				'type' => 'text',
-				'label' => __( 'Class', 'recommendwp-widgets' ),
+				'label' => __( 'Class', 'ra-widgets-bundle' ),
 			),
 			'lists' => array(
 				'type' => 'repeater',
-				'label' => __('Add List', 'recommendwp-widgets'),
-				'item_name' => __('List', 'recommendwp-widgets'),
+				'label' => __('Add List', 'ra-widgets-bundle'),
+				'item_name' => __('List', 'ra-widgets-bundle'),
 				'item_label' => array(
 					'selector' => "[id*='title']",
 					'update_event' => 'change',
@@ -44,12 +44,12 @@ class List_Widget extends SiteOrigin_Widget {
 				'fields' => array(
 					'title' => array(
 						'type' => 'text',
-						'label' => __( 'List Title', 'recommendwp-widgets' ),
+						'label' => __( 'List Title', 'ra-widgets-bundle' ),
 						'default' => ''
 					),
 					'content' => array(
 						'type' => 'tinymce',
-						'label' => __('List Content', 'recommendwp-widgets'),
+						'label' => __('List Content', 'ra-widgets-bundle'),
 						'default' => '',
 						'rows' => 10,
 						'default_editor' => 'html',
@@ -70,23 +70,23 @@ class List_Widget extends SiteOrigin_Widget {
 				'fields' => array(
                     'image' => array(
                         'type' => 'media',
-                        'label' => __('Choose an image', 'recommendwp-widgets'),
-                        'choose' => __('Choose image', 'recommendwp-widgets'),
-                        'update' => __('Set image', 'recommendwp-widgets'),
+                        'label' => __('Choose an image', 'ra-widgets-bundle'),
+                        'choose' => __('Choose image', 'ra-widgets-bundle'),
+                        'update' => __('Set image', 'ra-widgets-bundle'),
                         'library' => 'image'
                     ),
                     'size' => array(
         				'type' => 'number',
-        				'label' => __( 'Icon size', 'recommendwp-widgets' ),
+        				'label' => __( 'Icon size', 'ra-widgets-bundle' ),
         				'default' => '16'
         			)
 				)
 			),
             'template' => array(
 				'type' => 'select',
-				'label' => __( 'Choose template', 'recommendwp-widgets' ),
+				'label' => __( 'Choose template', 'ra-widgets-bundle' ),
 				'options' => array(
-					'default' => __( 'Default', 'recommendwp-widgets' )
+					'default' => __( 'Default', 'ra-widgets-bundle' )
 				),
 				'default' => 'default'
 			)
@@ -117,4 +117,4 @@ class List_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'rwpw-lists', __FILE__, 'List_Widget' );
+siteorigin_widget_register( 'rawb-lists', __FILE__, 'List_Widget' );

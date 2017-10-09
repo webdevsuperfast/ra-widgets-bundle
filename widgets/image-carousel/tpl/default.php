@@ -16,7 +16,7 @@ echo '<div class="image-carousel-widget">';
 
     $classes = array();
 
-    $classes[] = 'rwpw-image-carousel';
+    $classes[] = 'rawb-image-carousel';
     $classes[] = 'owl-carousel';
     $classes[] = $options['class'] ? ' ' . $options['class'] : '';
 
@@ -45,9 +45,9 @@ echo '<div class="image-carousel-widget">';
     $attributes['slidestablet'] = $slides_tablet ? (int) $slides_tablet : (int) $slides;
     $attributes['loop'] = $options['loop'] == true ? 'true' : 'false';
 
-    wp_enqueue_script( 'rwpw-owl-carousel-js' );
-    wp_enqueue_script( 'rwpw-widgets-js' );
-    wp_localize_script( 'rwpw-widgets-js', 'imagecarousel' . (int)$widget_id, $attributes );
+    wp_enqueue_script( 'rawb-owl-carousel-js' );
+    wp_enqueue_script( 'rawb-widgets-js' );
+    wp_localize_script( 'rawb-widgets-js', 'imagecarousel' . (int)$widget_id, $attributes );
 
     if ( is_array( $images ) && !is_wp_error( $images ) ) { ?>
         <div <?php foreach( $attr as $name => $value ) echo $name . '="' . $value . '" ' ?>>
@@ -58,7 +58,7 @@ echo '<div class="image-carousel-widget">';
                 $url = $imagesource[0];
 
                 if ( $url ) {
-                    $src = rwpw_thumb( $url, $imageattr['imagex'] ? $imageattr['imagex'] : 0, $imageattr['imagey'] ? $imageattr['imagey'] : 0 );
+                    $src = rawb_thumb( $url, $imageattr['imagex'] ? $imageattr['imagex'] : 0, $imageattr['imagey'] ? $imageattr['imagey'] : 0 );
                 } else {
                     $src = $url;
                 }

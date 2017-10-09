@@ -1,18 +1,18 @@
 <?php
 /*
-Widget Name: RWP Image Carousel
+Widget Name: RA Image Carousel
 Description: A simple image carousel widget.
-Author: RecommendWP
-Author URI: http://www.recommendwp.com
+Author: Rotsen Mark Acob
+Author URI: http://rotsenacob.com
 */
 
 class Image_Carousel_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
-            'rwpw-image-carousel',
-            __( 'RWP Image Carousel', 'recommendwp-widgets' ),
+            'rawb-image-carousel',
+            __( 'RA Image Carousel', 'ra-widgets-bundle' ),
             array(
-                'description' => __( 'A simple image carousel widget', 'recommendwp-widgets' ),
+                'description' => __( 'A simple image carousel widget', 'ra-widgets-bundle' ),
                 'help' => ''
             ),
             array(),
@@ -25,17 +25,17 @@ class Image_Carousel_Widget extends SiteOrigin_Widget {
 		return array(
 			'title' => array(
 				'type' => 'text',
-				'label' => __('Title', 'recommendwp-widgets'),
+				'label' => __('Title', 'ra-widgets-bundle'),
 				'default' => ''
 			),
 			'class' => array(
 				'type' => 'text',
-				'label' => __( 'Class', 'recommendwp-widgets' ),
+				'label' => __( 'Class', 'ra-widgets-bundle' ),
 			),
 			'images' => array(
 				'type' => 'repeater',
-				'label' => __('Add Images', 'recommendwp-widgets'),
-				'item_name' => __('Image', 'recommendwp-widgets'),
+				'label' => __('Add Images', 'ra-widgets-bundle'),
+				'item_name' => __('Image', 'ra-widgets-bundle'),
 				'item_label' => array(
 					'selector' => "[id*='image']",
 					'update_event' => 'change',
@@ -44,19 +44,19 @@ class Image_Carousel_Widget extends SiteOrigin_Widget {
 				'fields' => array(
 					'image' => array(
 						'type' => 'media',
-						'label' => __('Choose an image', 'recommendwp-widgets'),
-						'choose' => __('Choose image', 'recommendwp-widgets'),
-						'update' => __('Set image', 'recommendwp-widgets'),
+						'label' => __('Choose an image', 'ra-widgets-bundle'),
+						'choose' => __('Choose image', 'ra-widgets-bundle'),
+						'update' => __('Set image', 'ra-widgets-bundle'),
 						'library' => 'image'
 					),
 					'alt' => array(
 						'type' => 'text',
-						'label' => __( 'Alt text', 'recommendwp-widgets' ),
+						'label' => __( 'Alt text', 'ra-widgets-bundle' ),
 						'default' => ''
 					),
 					'link' => array(
 						'type' => 'text',
-						'label' => __('Image link', 'recommendwp-widgets'),
+						'label' => __('Image link', 'ra-widgets-bundle'),
 						'default' => ''
 					)
 				)
@@ -80,7 +80,7 @@ class Image_Carousel_Widget extends SiteOrigin_Widget {
 			),
 			'slideshow' => array(
 				'type' => 'section',
-				'label' => __( 'Slideshow Settings', 'recommendwp-widgets' ),
+				'label' => __( 'Slideshow Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'slides' => array(
@@ -147,26 +147,26 @@ class Image_Carousel_Widget extends SiteOrigin_Widget {
 			),
 			'responsive' => array(
 				'type' => 'section',
-				'label' => __( 'Responsive Settings', 'recommendwp-widgets' ),
+				'label' => __( 'Responsive Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'mobile' => array(
 						'type' => 'number',
-						'label' => __( 'Slides for mobile', 'recommendwp-widgets' ),
+						'label' => __( 'Slides for mobile', 'ra-widgets-bundle' ),
 						'default' => 1
 					),
 					'tablet' => array(
 						'type' => 'number',
-						'label' => __( 'Slides for tablets', 'recommendwp-widgets' ),
+						'label' => __( 'Slides for tablets', 'ra-widgets-bundle' ),
 						'default' => 1
 					),
 				)
 			),
 			'template' => array(
 				'type' => 'select',
-				'label' => __( 'Choose template', 'recommendwp-widgets' ),
+				'label' => __( 'Choose template', 'ra-widgets-bundle' ),
 				'options' => array(
-					'default' => __( 'Default', 'recommendwp-widgets' )
+					'default' => __( 'Default', 'ra-widgets-bundle' )
 				),
 				'default' => 'default'
 			)
@@ -211,4 +211,4 @@ class Image_Carousel_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'rwpw-image-carousel', __FILE__, 'Image_Carousel_Widget' );
+siteorigin_widget_register( 'rawb-image-carousel', __FILE__, 'Image_Carousel_Widget' );

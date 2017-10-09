@@ -1,7 +1,7 @@
 <?php
 $classes = array();
 $classes[] = 'mfp-hide';
-$classes[] = 'rwpw-popup-content';
+$classes[] = 'rawb-popup-content';
 $classes[] = $class;
 
 $styles = array();
@@ -22,7 +22,7 @@ $attr = array(
         <div class="popup-wrapper">
             <?php if ( $display_image == true ) { ?>
                 <div class="popup-image">
-                    <?php $this->sub_widget( 'RWP_Image_Widget', $args, $instance['image'] ); ?>
+                    <?php $this->sub_widget( 'RA_Image_Widget', $args, $instance['image'] ); ?>
                 </div>
             <?php } ?>
             <?php if ( $display_content == true ) { ?>

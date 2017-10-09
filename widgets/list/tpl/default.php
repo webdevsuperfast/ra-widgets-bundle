@@ -14,7 +14,7 @@ echo '<div class="list-widget">';
 
     $classes = array();
 
-    $classes[] = 'rwpw-list';
+    $classes[] = 'rawb-list';
     $classes[] = $instance['class'];
 
     $attr = array(
@@ -30,7 +30,7 @@ echo '<div class="list-widget">';
                     <div class="list-wrapper">
                         <?php if( !empty( $icon_image ) ) {
                             $attachment = wp_get_attachment_image_src( $icon_image, 'full' );
-                            $image = rwpw_thumb( $attachment[0], $width, $height, true );
+                            $image = rawb_thumb( $attachment[0], $width, $height, true );
                             echo '<div class="list-image"><img src="'.$image.'" alt="Icon" /></div>';
                         } ?>
                         <div class="list-content">

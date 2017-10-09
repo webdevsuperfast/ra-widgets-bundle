@@ -1,18 +1,18 @@
 <?php
 /*
-Widget Name: RWP Testimonial
+Widget Name: RA Testimonial
 Description: A simple testimonial widget.
-Author: RecommendWP
-Author URI: http://www.recommendwp.com
+Author: Rotsen Mark Acob
+Author URI: http://rotsenacob.com
 */
 
-class RWP_Testimonial_Widget extends SiteOrigin_Widget {
+class RA_Testimonial_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
-            'rwpw-testimonial',
-            __( 'RWP Testimonial', 'recommendwp-widgets' ),
+            'rawb-testimonial',
+            __( 'RA Testimonial', 'ra-widgets-bundle' ),
             array(
-                'description' => __( 'A simple image carousel widget', 'recommendwp-widgets' ),
+                'description' => __( 'A simple image carousel widget', 'ra-widgets-bundle' ),
                 'help' => ''
             ),
             array(),
@@ -29,56 +29,56 @@ class RWP_Testimonial_Widget extends SiteOrigin_Widget {
     	return array(
 			'title' => array(
 				'type' => 'text',
-				'label' => __('Title', 'recommendwp-widgets'),
+				'label' => __('Title', 'ra-widgets-bundle'),
 				'default' => ''
 			),
 			'class' => array(
 				'type' => 'text',
-				'label' => __( 'Class', 'recommendwp-widgets' )
+				'label' => __( 'Class', 'ra-widgets-bundle' )
 			),
 			'post' => array(
 				'type' => 'section',
-				'label' => __( 'Testimonial Settings', 'recommendwp-widgets' ),
+				'label' => __( 'Testimonial Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'numpost' => array(
 						'type' => 'number',
-						'label' => __( 'Number of testimonial to show', 'recommendwp-widgets' ),
+						'label' => __( 'Number of testimonial to show', 'ra-widgets-bundle' ),
 						'default' => 3
 					),
 					'order' => array(
 						'type' => 'select',
-						'label' => __( 'Sort Order', 'recommendwp-widgets' ),
+						'label' => __( 'Sort Order', 'ra-widgets-bundle' ),
 						'options' => array(
-							'ASC' => __( 'Ascending', 'recommendwp-widgets' ),
-							'DESC' => __( 'Descending', 'recommendwp-widgets' ),
+							'ASC' => __( 'Ascending', 'ra-widgets-bundle' ),
+							'DESC' => __( 'Descending', 'ra-widgets-bundle' ),
 						),
 						'default' => 'ASC'
 					),
 					'orderby' => array(
 						'type' => 'select',
-						'label' => __( 'Sort by', 'recommendwp-widgets' ),
+						'label' => __( 'Sort by', 'ra-widgets-bundle' ),
 						'options' => array(
-							'title' => __( 'Title', 'recommendwp-widgets' ),
-							'date' => __( 'Date', 'recommendwp-widgets' )
+							'title' => __( 'Title', 'ra-widgets-bundle' ),
+							'date' => __( 'Date', 'ra-widgets-bundle' )
 						),
 						'default' => 'date'
 					),
 					'imagex' => array(
 						'type' => 'number',
-						'label' => __( 'Image Width', 'recommendwp-widgets' ),
+						'label' => __( 'Image Width', 'ra-widgets-bundle' ),
 						'default' => ''
 					),
 					'imagey' => array(
 						'type' => 'number',
-						'label' => __( 'Image Height(optional)', 'recommendwp-widgets' ),
+						'label' => __( 'Image Height(optional)', 'ra-widgets-bundle' ),
 						'default' => ''
 					),
 				)
 			),
 			'slideshow' => array(
 				'type' => 'section',
-				'label' => __( 'Slideshow Settings', 'recommendwp-widgets' ),
+				'label' => __( 'Slideshow Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'slides' => array(
@@ -145,26 +145,26 @@ class RWP_Testimonial_Widget extends SiteOrigin_Widget {
 			),
 			'responsive' => array(
 				'type' => 'section',
-				'label' => __( 'Responsive Settings', 'recommendwp-widgets' ),
+				'label' => __( 'Responsive Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'mobile' => array(
 						'type' => 'number',
-						'label' => __( 'Slides for mobile', 'recommendwp-widgets' ),
+						'label' => __( 'Slides for mobile', 'ra-widgets-bundle' ),
 						'default' => 1
 					),
 					'tablet' => array(
 						'type' => 'number',
-						'label' => __( 'Slides for tablets', 'recommendwp-widgets' ),
+						'label' => __( 'Slides for tablets', 'ra-widgets-bundle' ),
 						'default' => 1
 					),
 				)
 			),
 			'template' => array(
 				'type' => 'select',
-				'label' => __( 'Choose template', 'recommendwp-widgets' ),
+				'label' => __( 'Choose template', 'ra-widgets-bundle' ),
 				'options' => array(
-					'default' => __( 'Default', 'recommendwp-widgets' )
+					'default' => __( 'Default', 'ra-widgets-bundle' )
 				),
 				'default' => 'default'
 			)
@@ -212,4 +212,4 @@ class RWP_Testimonial_Widget extends SiteOrigin_Widget {
     }
 }
 
-siteorigin_widget_register( 'rwpw-testimonial', __FILE__, 'RWP_Testimonial_Widget' );
+siteorigin_widget_register( 'rawb-testimonial', __FILE__, 'RA_Testimonial_Widget' );

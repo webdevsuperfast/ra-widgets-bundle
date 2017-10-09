@@ -1,10 +1,10 @@
 {
-  "name": "recommendwp-widgets",
+  "name": "ra-widgets-bundle",
   "version": "1.0.0",
   "description": "A collection of widgets for WordPress built using the SiteOrigin Widgets plugin API.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RecommendWP/recommendwp-widgets"
+    "url": "https://github.com/webdevsuperfast/ra-widgets-bundle"
   },
   "keywords": [
     "so-widgets-bundle",
@@ -12,15 +12,15 @@
     "recommendwp-widgets",
     "widgets"
   ],
-  "author": "RecommendWP",
-  "license": "GPL-3.0",
+  "author": "Rotsen Mark Acob",
+  "license": "GPL-2.0",
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-cache": "^0.4.6",
     "gulp-changed": "^3.1.0",
-    "gulp-clean-css": "^3.7.0",
+    "gulp-clean-css": "^3.9.0",
     "gulp-combine-mq": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^2.3.0",

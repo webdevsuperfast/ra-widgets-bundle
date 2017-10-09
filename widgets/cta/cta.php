@@ -1,18 +1,18 @@
 <?php
 /*
-Widget Name: RWP CTA
+Widget Name: RA CTA
 Description: A simple CTA widget.
-Author: RecommendWP
-Author URI: http://www.recommendwp.com
+Author: Rotsen Mark Acob
+Author URI: http://rotsenacob.com
 */
 
-class RWP_CTA_Widget extends SiteOrigin_Widget {
+class RA_CTA_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
-            'rwpw-cta',
-            __( 'RWP CTA', 'recommendwp-widgets' ),
+            'rawb-cta',
+            __( 'RA CTA', 'ra-widgets-bundle' ),
             array(
-                'description' => __( 'A simple CTA widget.', 'recommendwp-widgets' ),
+                'description' => __( 'A simple CTA widget.', 'ra-widgets-bundle' ),
             ),
             array(
 
@@ -23,10 +23,10 @@ class RWP_CTA_Widget extends SiteOrigin_Widget {
     }
 
     function initialize() {
-        if( !class_exists('RWP_Button_Widget') ) {
+        if( !class_exists('RA_Button_Widget') ) {
             SiteOrigin_Widgets_Bundle::single()->include_widget( 'rwp-button' );
         }
-        if( !class_exists('RWP_Image_Widget') ) {
+        if( !class_exists('RA_Image_Widget') ) {
             SiteOrigin_Widgets_Bundle::single()->include_widget( 'rwp-image' );
         }
     }
@@ -35,54 +35,54 @@ class RWP_CTA_Widget extends SiteOrigin_Widget {
         return array(
             'title' => array(
                 'type' => 'text',
-                'label' => __( 'Title', 'recommendwp-widgets' ),
-                'default' => __( '', 'recommendwp-widgets' )
+                'label' => __( 'Title', 'ra-widgets-bundle' ),
+                'default' => __( '', 'ra-widgets-bundle' )
             ),
             'subtitle' => array(
                 'type' => 'text',
-                'label' => __( 'Subtitle', 'recommendwp-widgets' ),
-                'default' => __( '', 'recommendwp-widgets' )
+                'label' => __( 'Subtitle', 'ra-widgets-bundle' ),
+                'default' => __( '', 'ra-widgets-bundle' )
             ),
             'content' => array(
                 'type' => 'textarea',
-                'label' => __( 'Content', 'recommendwp-widgets' ),
-                'default' => __( '', 'recommendwp-widgets' )
+                'label' => __( 'Content', 'ra-widgets-bundle' ),
+                'default' => __( '', 'ra-widgets-bundle' )
             ),
             'image' => array(
             	'type' => 'widget',
-            	'class' => 'RWP_Image_Widget',
-            	'label' => __( 'Image', 'recommendwp-widgets' )
+            	'class' => 'RA_Image_Widget',
+            	'label' => __( 'Image', 'ra-widgets-bundle' )
             ),
             'button' => array(
             	'type' => 'widget',
-            	'label' => __( 'Button', 'recommendwp-widgets' ),
-            	'class' => 'RWP_Button_Widget'
+            	'label' => __( 'Button', 'ra-widgets-bundle' ),
+            	'class' => 'RA_Button_Widget'
             ),
             'settings' => array(
             	'type' => 'section',
-            	'label' => __( 'Settings', 'recommendwp-widgets' ),
+            	'label' => __( 'Settings', 'ra-widgets-bundle' ),
             	'fields' => array(
             		'design' => array(
             			'type' => 'select',
-            			'label' => __( 'Design', 'recommendwp-widgets' ),
+            			'label' => __( 'Design', 'ra-widgets-bundle' ),
             			'options' => array(
-            				'default' => __( 'Default', 'recommendwp-widgets' )
+            				'default' => __( 'Default', 'ra-widgets-bundle' )
             			),
             			'default' => 'default'
             		),
             		'display_image' => array(
             			'type' => 'checkbox',
-            			'label' => __( 'Display Image', 'recommendwp-widgets' ),
+            			'label' => __( 'Display Image', 'ra-widgets-bundle' ),
             			'default' => true
             		),
                     'display_content' => array(
                         'type' => 'checkbox',
-            			'label' => __( 'Display Content', 'recommendwp-widgets' ),
+            			'label' => __( 'Display Content', 'ra-widgets-bundle' ),
             			'default' => true
                     ),
             		'display_button' => array(
             			'type' => 'checkbox',
-            			'label' => __( 'Display Button', 'recommendwp-widgets' ),
+            			'label' => __( 'Display Button', 'ra-widgets-bundle' ),
             			'default' => true
             		)
             	)
@@ -116,14 +116,14 @@ class RWP_CTA_Widget extends SiteOrigin_Widget {
     }
 
     function modify_child_widget_form( $child_widget_form, $child_widget ) {
-        if ( get_class( $child_widget ) == 'RWP_Image_Widget' ) {
+        if ( get_class( $child_widget ) == 'RA_Image_Widget' ) {
             unset( $child_widget_form['settings']['fields']['alignment'] );
             unset( $child_widget_form['title'] );
             unset( $child_widget_form['content'] );
             unset( $child_widget_form['template'] );
         }
 
-        if ( get_class( $child_widget ) == 'RWP_Button_Widget' ) {
+        if ( get_class( $child_widget ) == 'RA_Button_Widget' ) {
             unset( $child_widget_form['template'] );
         }
         
@@ -150,4 +150,4 @@ class RWP_CTA_Widget extends SiteOrigin_Widget {
     }
 }
 
-siteorigin_widget_register( 'rwpw-cta', __FILE__, 'RWP_CTA_Widget' );
+siteorigin_widget_register( 'rawb-cta', __FILE__, 'RA_CTA_Widget' );

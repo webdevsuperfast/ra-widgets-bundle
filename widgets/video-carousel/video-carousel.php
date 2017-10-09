@@ -1,18 +1,18 @@
 <?php
 /*
-Widget Name: RWP Video Carousel
+Widget Name: RA Video Carousel
 Description: A simple video carousel widget.
-Author: RecommendWP
-Author URI: http://www.recommendwp.com
+Author: Rotsen Mark Acob
+Author URI: http://rotsenacob.com
 */
 
 class Video_Carousel_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
-            'rwpw-video-carousel',
-            __( 'RWP Video Carousel', 'recommendwp-widgets' ),
+            'rawb-video-carousel',
+            __( 'RA Video Carousel', 'ra-widgets-bundle' ),
             array(
-                'description' => __( 'A simple video carousel widget', 'recommendwp-widgets' ),
+                'description' => __( 'A simple video carousel widget', 'ra-widgets-bundle' ),
                 'help' => ''
             ),
             array(),
@@ -25,17 +25,17 @@ class Video_Carousel_Widget extends SiteOrigin_Widget {
 		return array(
 			'title' => array(
 				'type' => 'text',
-				'label' => __('Title', 'recommendwp-widgets'),
+				'label' => __('Title', 'ra-widgets-bundle'),
 				'default' => ''
 			),
 			'class' => array(
 				'type' => 'text',
-				'label' => __( 'Class', 'recommendwp-widgets' ),
+				'label' => __( 'Class', 'ra-widgets-bundle' ),
 			),
 			'videos' => array(
 				'type' => 'repeater',
-				'label' => __('Add Videos', 'recommendwp-widgets'),
-				'item_name' => __('Video', 'recommendwp-widgets'),
+				'label' => __('Add Videos', 'ra-widgets-bundle'),
+				'item_name' => __('Video', 'ra-widgets-bundle'),
 				'item_label' => array(
 					'selector' => "[id*='video']",
 					'update_event' => 'change',
@@ -44,30 +44,30 @@ class Video_Carousel_Widget extends SiteOrigin_Widget {
 				'fields' => array(
 					'video' => array(
 						'type' => 'link',
-                        'label' => __( 'Video Link', 'recommendwp-widgets' )
+                        'label' => __( 'Video Link', 'ra-widgets-bundle' )
 					)
 				)
 			),
 			'settings' => array(
 				'type' => 'section',
-				'label' => __( 'Video Settings', 'recommendwp-widgets' ),
+				'label' => __( 'Video Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'videox' => array(
 						'type' => 'number',
-						'label' => __( 'Video Width', 'recommendwp-widgets' ),
+						'label' => __( 'Video Width', 'ra-widgets-bundle' ),
 						'default' => '860'
 					),
 					'videoy' => array(
 						'type' => 'number',
-						'label' => __( 'Video Height', 'recommendwp-widgets' ),
+						'label' => __( 'Video Height', 'ra-widgets-bundle' ),
 						'default' => '480'
 					),
 				)
 			),
 			'slideshow' => array(
 				'type' => 'section',
-				'label' => __( 'Slideshow Settings', 'recommendwp-widgets' ),
+				'label' => __( 'Slideshow Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'slides' => array(
@@ -134,26 +134,26 @@ class Video_Carousel_Widget extends SiteOrigin_Widget {
 			),
 			'responsive' => array(
 				'type' => 'section',
-				'label' => __( 'Responsive Settings', 'recommendwp-widgets' ),
+				'label' => __( 'Responsive Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'mobile' => array(
 						'type' => 'number',
-						'label' => __( 'Slides for mobile', 'recommendwp-widgets' ),
+						'label' => __( 'Slides for mobile', 'ra-widgets-bundle' ),
 						'default' => 1
 					),
 					'tablet' => array(
 						'type' => 'number',
-						'label' => __( 'Slides for tablets', 'recommendwp-widgets' ),
+						'label' => __( 'Slides for tablets', 'ra-widgets-bundle' ),
 						'default' => 1
 					),
 				)
 			),
 			'template' => array(
 				'type' => 'select',
-				'label' => __( 'Choose template', 'recommendwp-widgets' ),
+				'label' => __( 'Choose template', 'ra-widgets-bundle' ),
 				'options' => array(
-					'default' => __( 'Default', 'recommendwp-widgets' )
+					'default' => __( 'Default', 'ra-widgets-bundle' )
 				),
 				'default' => 'default'
 			)
@@ -198,4 +198,4 @@ class Video_Carousel_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'rwpw-video-carousel', __FILE__, 'Video_Carousel_Widget' );
+siteorigin_widget_register( 'rawb-video-carousel', __FILE__, 'Video_Carousel_Widget' );

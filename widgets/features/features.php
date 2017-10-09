@@ -1,18 +1,18 @@
 <?php
 /*
-Widget Name: RWP Features
+Widget Name: RA Features
 Description: A simple features widget.
-Author: RecommendWP
-Author URI: http://www.recommendwp.com
+Author: Rotsen Mark Acob
+Author URI: http://rotsenacob.com
 */
 
-class RWP_Features_Widget extends SiteOrigin_Widget {
+class RA_Features_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'rwpw-features',
-			__( 'RWP Features', 'recommendwp-widgets' ),
+			'rawb-features',
+			__( 'RA Features', 'ra-widgets-bundle' ),
 			array(
-				'description' => __( 'A simple features widget.', 'recommendwp-widgets' )
+				'description' => __( 'A simple features widget.', 'ra-widgets-bundle' )
 			),
 			array(),
 			false,
@@ -28,12 +28,12 @@ class RWP_Features_Widget extends SiteOrigin_Widget {
 		return array(
 			'title' => array(
 				'type' => 'text',
-				'label' => __( 'Title', 'recommendwp-widgets' )
+				'label' => __( 'Title', 'ra-widgets-bundle' )
 			),
 			'features' => array(
 				'type' => 'repeater',
-				'label' => __('Add Features', 'recommendwp-widgets'),
-				'item_name' => __('Feature', 'recommendwp-widgets'),
+				'label' => __('Add Features', 'ra-widgets-bundle'),
+				'item_name' => __('Feature', 'ra-widgets-bundle'),
 				'item_label' => array(
 					'selector' => "[id*='headline']",
 					'update_event' => 'change',
@@ -42,64 +42,64 @@ class RWP_Features_Widget extends SiteOrigin_Widget {
 				'fields' => array(
 					'icon_image' => array(
 						'type' => 'select',
-						'label' => __( 'Icon or Image?', 'recommendwp-widgets' ),
+						'label' => __( 'Icon or Image?', 'ra-widgets-bundle' ),
 						'options' => array(
-							'icon' => __( 'Icon', 'recommendwp-widgets' ),
-							'image' => __( 'Image', 'recommendwp-widgets' )
+							'icon' => __( 'Icon', 'ra-widgets-bundle' ),
+							'image' => __( 'Image', 'ra-widgets-bundle' )
 						),
 						'default' => 'icon'
 					),
 					'icon' => array(
 						'type' => 'icon',
-						'label' => __( 'Icon', 'recommendwp-widgets' )
+						'label' => __( 'Icon', 'ra-widgets-bundle' )
 					),
 					'icon_size' => array(
         				'type' => 'number',
-        				'label' => __( 'Icon size', 'recommendwp-widgets' ),
+        				'label' => __( 'Icon size', 'ra-widgets-bundle' ),
         				'default' => '16'
         			),
 					'icon_color' => array(
 						'type' => 'color',
-						'label' => __( 'Color', 'recommendwp-widgets' ),
+						'label' => __( 'Color', 'ra-widgets-bundle' ),
 						'default' => '#fff'
 					),
 					'image' => array(
 						'type' => 'media',
-						'label' => __('Choose an image', 'recommendwp-widgets'),
-						'choose' => __('Choose image', 'recommendwp-widgets'),
-						'update' => __('Set image', 'recommendwp-widgets'),
+						'label' => __('Choose an image', 'ra-widgets-bundle'),
+						'choose' => __('Choose image', 'ra-widgets-bundle'),
+						'update' => __('Set image', 'ra-widgets-bundle'),
 						'library' => 'image'
 					),
 					'headline' => array(
 						'type' => 'text',
-						'label' => __( 'Headline', 'recommendwp-widgets' ),
+						'label' => __( 'Headline', 'ra-widgets-bundle' ),
 					),
 					'subheadline' => array(
 						'type' => 'textarea',
-						'label' => __( 'Subheadline', 'recommendwp-widgets' )
+						'label' => __( 'Subheadline', 'ra-widgets-bundle' )
 					),
 					'button_text' => array(
 						'type' => 'text',
-						'label' => __( 'Button Text', 'recommendwp-widgets' ),
+						'label' => __( 'Button Text', 'ra-widgets-bundle' ),
 						'default' => 'Learn More'
 					),
 					'button_link' => array(
 						'type' => 'link',
-						'label' => __( 'Button Link', 'recommendwp-widgets' )
+						'label' => __( 'Button Link', 'ra-widgets-bundle' )
 					)
 				)
 			),
 			'design' => array(
 				'type' => 'select',
-				'label' => __( 'Design', 'recommendwp-widgets' ),
+				'label' => __( 'Design', 'ra-widgets-bundle' ),
 				'options' => array(
-					'default' => __( 'Default', 'recommendwp-widgets' ),
+					'default' => __( 'Default', 'ra-widgets-bundle' ),
 				),
 				'default' => 'default'
 			),
 			'column' => array(
 				'type' => 'slider',
-				'label' => __( 'Columns', 'recommendwp-widgets' ),
+				'label' => __( 'Columns', 'ra-widgets-bundle' ),
 				'default' => 3,
 				'min' => 1,
 				'max' => 12,
@@ -133,4 +133,4 @@ class RWP_Features_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'rwpw-features', __FILE__, 'RWP_Features_Widget' );
+siteorigin_widget_register( 'rawb-features', __FILE__, 'RA_Features_Widget' );

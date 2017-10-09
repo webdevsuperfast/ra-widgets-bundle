@@ -12,15 +12,15 @@ $widget_id = preg_replace( '/[^0-9]/', '', $widget_id );
 $attributes = array();
 
 if ( $popup_type != 'none' ) {
-	$classes[] = 'rwpw-popup';
-	wp_enqueue_script( 'rwpw-magnific-popup-js' );
-	wp_enqueue_script( 'rwpw-widgets-js' );
+	$classes[] = 'rawb-popup';
+	wp_enqueue_script( 'rawb-magnific-popup-js' );
+	wp_enqueue_script( 'rawb-widgets-js' );
 	$attr = array();
 
 	$attr['type'] = $popup_type;
 	$attr['id'] = 'popup-' . (int)$widget_id;
 
-	wp_localize_script( 'rwpw-widgets-js', 'popup' . (int)$widget_id, $attr );
+	wp_localize_script( 'rawb-widgets-js', 'popup' . (int)$widget_id, $attr );
 }
 
 $attributes['class'] = esc_attr( implode( ' ', $classes ) );

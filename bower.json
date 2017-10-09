@@ -1,16 +1,16 @@
 {
-  "name": "recommendwp-widgets",
+  "name": "ra-widgets-bundle",
   "authors": [
-    "RecommendWP"
+    "Rotsen Mark Acob"
   ],
   "description": "A collection of widgets for WordPress built using the SiteOrigin Widgets API.",
   "main": "",
   "keywords": [
     "siteorigin-widgets",
-    "recommendwp",
+    "wordpress-widgets",
     "widget"
   ],
-  "license": "GPLv3",
+  "license": "GPLv2",
   "homepage": "",
   "private": true,
   "ignore": [

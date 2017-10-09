@@ -18,7 +18,7 @@ $classes[] = 'side-image-' . $template;
 		<?php } ?>
 		<?php if ( $display_button == true ) { ?>
 			<div class="side-image-button">
-				<?php $this->sub_widget( 'RWP_Button_Widget', $args, $instance['button'] ); ?>
+				<?php $this->sub_widget( 'RA_Button_Widget', $args, $instance['button'] ); ?>
 			</div>
 		<?php } ?>
 	</div>

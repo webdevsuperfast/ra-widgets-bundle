@@ -16,7 +16,7 @@ echo '<div class="video-carousel-widget">';
 
     $classes = array();
 
-    $classes[] = 'rwpw-video-carousel';
+    $classes[] = 'rawb-video-carousel';
     $classes[] = 'owl-carousel';
     $classes[] = 'owl-theme';
     $classes[] = $options['class'] ? ' ' . $options['class'] : '';
@@ -48,9 +48,9 @@ echo '<div class="video-carousel-widget">';
     $attributes['videox'] = (int) $videox;
     $attributes['videoy'] = (int) $videoy;
 
-    wp_enqueue_script( 'rwpw-owl-carousel-js' );
-    wp_enqueue_script( 'rwpw-widgets-js' );
-    wp_localize_script( 'rwpw-widgets-js', 'videocarousel' . (int)$widget_id, $attributes );
+    wp_enqueue_script( 'rawb-owl-carousel-js' );
+    wp_enqueue_script( 'rawb-widgets-js' );
+    wp_localize_script( 'rawb-widgets-js', 'videocarousel' . (int)$widget_id, $attributes );
 
     if ( is_array( $videos ) && !is_wp_error( $videos ) ) { ?>
         <div <?php foreach( $attr as $name => $value ) echo $name . '="' . $value . '" ' ?>>
