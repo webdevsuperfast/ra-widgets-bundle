@@ -24,10 +24,10 @@ class RA_CTA_Widget extends SiteOrigin_Widget {
 
     function initialize() {
         if( !class_exists('RA_Button_Widget') ) {
-            SiteOrigin_Widgets_Bundle::single()->include_widget( 'rwp-button' );
+            SiteOrigin_Widgets_Bundle::single()->include_widget( 'rawb-button' );
         }
         if( !class_exists('RA_Image_Widget') ) {
-            SiteOrigin_Widgets_Bundle::single()->include_widget( 'rwp-image' );
+            SiteOrigin_Widgets_Bundle::single()->include_widget( 'rawb-image' );
         }
     }
 
