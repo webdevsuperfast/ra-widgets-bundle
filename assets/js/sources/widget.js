@@ -1,8 +1,4 @@
 (function($){
-	$(document).ready(function(){
-        
-	});
-
 	// Window load event with minimum delay
 	// @link https://css-tricks.com/snippets/jquery/window-load-event-with-minimum-delay/
 	(function fn() {
@@ -84,72 +80,6 @@
                 }
             }
 
-            // Video Carousel
-            if( $('.rawb-video-carousel').length > 0 ) {
-                $('.rawb-video-carousel').each(function(index){
-                    var instance = $(this).data('instance');
-                    videoInstance(instance);
-                });
-
-                function videoInstance(instance) {
-                    var obj = window['videocarousel' + instance];
-
-                    var sid = obj.id,
-                        item = obj.items,
-                        navigation = (obj.navigation == "true"),
-                        pagination = (obj.pagination == "true"),
-                        autoplay = (obj.autoplay == "true"),
-                        smartspeed = obj.smartspeed,
-                        fluidspeed = obj.fluidspeed,
-                        autoheight = (obj.autoheight == "true"),
-                        autowidth = (obj.autowidth == "true"),
-                        lazyload = (obj.lazyload == "true"),
-                        mergefit = (obj.mergefit == "true"),
-                        center = (obj.center == "true"),
-                        slidesmobile = obj.slidesmobile,
-                        slidestablet = obj.slidestablet,
-                        loop = obj.loop,
-                        videox = obj.videox,
-                        videoy = obj.videoy,
-                        margin = obj.margin;
-
-                    var owl = $('#' + sid);
-
-                    owl.owlCarousel({
-                        items: item,
-                        margin: parseInt(margin),
-                        nav: navigation,
-                        dots: pagination,
-                        autoplay: autoplay,
-                        smartSpeed: smartspeed,
-                        fluidSpeed: fluidspeed,
-                        loop: loop,
-                        autoHeight: autoheight,
-                        center: center,
-                        mergeFit: mergefit,
-                        autoWidth: autowidth,
-                        lazyLoad: true,
-                        video: true,
-                        videoWidth: videox,
-                        videoHeight: videoy,
-                        responsive: {
-                            0: {
-                                items: slidesmobile,
-                                nav: navigation
-                            },
-                            768: {
-                                items: slidestablet,
-                                nav: navigation
-                            },
-                            1024: {
-                                items: item,
-                                nav: navigation
-                            }
-                        }
-                    });
-                }
-            }
-
             // Testimonial
             if ($('.rawb-testimonial').length > 0) {
                 $('.rawb-testimonial').each(function (index) {
@@ -160,65 +90,6 @@
                 function testimonialInstance(instance) {
                     var obj = window['testimonial' + instance];
 
-                    var sid = obj.id,
-                        item = obj.items,
-                        navigation = (obj.navigation == "true"),
-                        pagination = (obj.pagination == "true"),
-                        autoplay = (obj.autoplay == "true"),
-                        smartspeed = obj.duration,
-                        fluidspeed = obj.speed,
-                        autoheight = (obj.autoheight == "true"),
-                        autowidth = (obj.autowidth == "true"),
-                        mergefit = (obj.mergefit == "true"),
-                        center = (obj.center == "true"),
-                        slidesmobile = obj.slidesMobile,
-                        slidestablet = obj.slidesTablet,
-                        loop = (obj.loop == "true"),
-                        margin = obj.margin;
-
-                    var owl = $('#' + sid);
-
-                    owl.owlCarousel({
-                        items: item,
-                        margin: parseInt(margin),
-                        nav: navigation,
-                        dots: pagination,
-                        autoplay: autoplay,
-                        smartSpeed: smartspeed,
-                        fluidSpeed: fluidspeed,
-                        loop: loop,
-                        autoHeight: autoheight,
-                        center: center,
-                        mergeFit: mergefit,
-                        autoWidth: autowidth,
-                        responsive: {
-                            0: {
-                                items: slidesmobile,
-                                nav: navigation
-                            },
-                            768: {
-                                items: slidestablet,
-                                nav: navigation
-                            },
-                            1024: {
-                                items: item,
-                                nav: navigation
-                            }
-                        }
-                    });
-                }
-            }
-
-            // Post Carousel
-            if ($('.rawb-post-carousel').length > 0) {
-                $('.rawb-post-carousel').each(function (index) {
-                    var instance = $(this).data('instance');
-                    carouselInstance(instance);
-                });
-
-                function carouselInstance(instance) {
-                    var obj = window['postcarousel' + instance];
-                    
                     var sid = obj.id,
                         item = obj.items,
                         navigation = (obj.navigation == "true"),
