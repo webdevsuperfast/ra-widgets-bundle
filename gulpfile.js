@@ -18,14 +18,14 @@ var gulp = require('gulp'),
 
 // CSS
 gulp.task('styles', function(){
-    return gulp.src('assets/scss/*.scss')
+    return gulp.src('public/css/sources/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(autoprefixer('> 0%'))
         .pipe(cmq())
         .pipe(cleancss())
         .pipe(gulp.dest('temp/css'))
         .pipe(rename('widget.css'))
-        .pipe(gulp.dest('assets/css'))
+        .pipe(gulp.dest('public/css'))
         .pipe(notify({ message: 'Source styles task complete' }));
 } );
 
@@ -34,7 +34,7 @@ gulp.task('scripts', function(){
     return gulp.src([
         'bower_components/owl.carousel/dist/owl.carousel.js',
         'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
-        'assets/js/sources/*.js'
+        'public/js/sources/*.js'
     ])
     .pipe(foreach(function(stream, file){
         return stream
@@ -43,7 +43,7 @@ gulp.task('scripts', function(){
             .pipe(rename({suffix: '.min'}))
             .pipe(gulp.dest('temp/js'))
     }))
-    .pipe(gulp.dest('assets/js'))
+    .pipe(gulp.dest('public/js'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
@@ -62,6 +62,6 @@ gulp.task('default', ['clean:temp'], function() {
 // Watch
 gulp.task('watch', function() {
     // Watch .scss files
-    gulp.watch(['assets/scss/*.scss', 'assets/sass/**/*.scss'], ['styles']);
-    gulp.watch(['assets/js/sources/*.js'], ['scripts']);
+    gulp.watch(['public/css/sources/*.scss', 'public/css/**/*.scss'], ['styles']);
+    gulp.watch(['public/js/sources/*.js'], ['scripts']);
 });

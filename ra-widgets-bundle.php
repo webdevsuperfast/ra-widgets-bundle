@@ -26,27 +26,37 @@ class RA_Widgets_Bundle {
 		add_action( 'siteorigin_widgets_enqueue_admin_scripts_rawb-features', array( $this, 'rawb_features_admin_scripts' ), 10, 2 );
 
 		add_action( 'siteorigin_panel_enqueue_admin_scripts', array( $this, 'rawb_features_admin_scripts' ) );
+
+		//* Require if mr_image_resize function doesn't exist
+		if ( !function_exists( 'mr_image_resize' ) ) {
+			require_once( plugin_dir_path( __FILE__ ) . 'lib/classes/mr-image-resize.php' );
+		}
+
+		//* Require if mr_image_resize function exists
+		if ( function_exists( 'mr_image_resize' ) ) {
+			require_once( plugin_dir_path( __FILE__ ) . 'lib/misc.php' );
+		}
 	}
 
 	public function rawb_enqueue_scripts() {
 		if ( ! is_admin() ) {
 			// Widget CSS
-			wp_register_style( 'rawb-css', plugin_dir_url( __FILE__ ) . 'assets/css/widget.css' );
+			wp_register_style( 'rawb-css', plugin_dir_url( __FILE__ ) . 'public/css/widget.css' );
 			wp_enqueue_style( 'rawb-css' );
 
 			// Owl Carousel JS
-			wp_register_script( 'rawb-owl-carousel-js', plugin_dir_url( __FILE__ ) . 'assets/js/owl.carousel.min.js', array( 'jquery' ), null, true );
+			wp_register_script( 'rawb-owl-carousel-js', plugin_dir_url( __FILE__ ) . 'public/js/owl.carousel.min.js', array( 'jquery' ), null, true );
 
 			// Magnific Popup JS
-			wp_register_script( 'rawb-magnific-popup-js', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.magnific-popup.min.js', array( 'jquery' ), null, true );
+			wp_register_script( 'rawb-magnific-popup-js', plugin_dir_url( __FILE__ ) . 'public/js/jquery.magnific-popup.min.js', array( 'jquery' ), null, true );
 
 			// Widget JS
-			wp_register_script( 'rawb-widgets-js', plugin_dir_url( __FILE__ ) . 'assets/js/widget.min.js', array( 'jquery' ), null, true );
+			wp_register_script( 'rawb-widgets-js', plugin_dir_url( __FILE__ ) . 'public/js/widget.min.js', array( 'jquery' ), null, true );
 		}
 	}
 
 	public function rawb_features_admin_scripts() {
-		wp_register_script( 'rawb-features-js', plugin_dir_url( __FILE__ ) . 'assets/js/features.js', array( 'jquery' ), null, true );
+		wp_register_script( 'rawb-features-js', plugin_dir_url( __FILE__ ) . 'admin/js/features.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'rawb-features-js' );
 	}
 
