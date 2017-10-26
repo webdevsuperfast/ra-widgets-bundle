@@ -12,7 +12,7 @@ class RA_Testimonial_Widget extends SiteOrigin_Widget {
             'rawb-testimonial',
             __( 'RA Testimonial', 'ra-widgets-bundle' ),
             array(
-                'description' => __( 'A simple image carousel widget', 'ra-widgets-bundle' ),
+                'description' => __( 'A simple testimonial widget', 'ra-widgets-bundle' ),
                 'help' => ''
             ),
             array(),
