@@ -1,18 +1,18 @@
 <?php
 /*
 Widget Name: RA Image Carousel
-Description: A simple image carousel widget.
+Description: A simple image carousel widget using Owl Carousel.
 Author: Rotsen Mark Acob
 Author URI: http://rotsenacob.com
 */
 
-class Image_Carousel_Widget extends SiteOrigin_Widget {
+class RA_Image_Carousel_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
             'rawb-image-carousel',
             __( 'RA Image Carousel', 'ra-widgets-bundle' ),
             array(
-                'description' => __( 'A simple image carousel widget', 'ra-widgets-bundle' ),
+                'description' => __( 'A simple image carousel widget using Owl Carousel', 'ra-widgets-bundle' ),
                 'help' => ''
             ),
             array(),
@@ -211,4 +211,4 @@ class Image_Carousel_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'rawb-image-carousel', __FILE__, 'Image_Carousel_Widget' );
+siteorigin_widget_register( 'rawb-image-carousel', __FILE__, 'RA_Image_Carousel_Widget' );
