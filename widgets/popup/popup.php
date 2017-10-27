@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: RA Popup
-Description: A simple popup widget.
+Description: A simple popup content builder widget.
 Author: Rotsen Mark Acob
 Author URI: http://rotsenacob.com
 */
