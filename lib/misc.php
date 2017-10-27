@@ -22,3 +22,7 @@ function rawb_get_first_image() {
 		$first_img = $matches[1][0];
 	return $first_img;
 }
+
+function rawb_thumb($url, $width, $height=0, $align='') {
+    return mr_image_resize($url, $width, $height, true, $align, false);
+}
