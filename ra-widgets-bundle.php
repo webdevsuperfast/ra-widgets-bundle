@@ -22,11 +22,6 @@ class RA_Widgets_Bundle {
 		// Add widgets folder to SiteOrigin Widgets
 		add_filter( 'siteorigin_widgets_widget_folders', array( $this, 'rawb_widget_folders' ) );
 
-		// Enqueue Scripts related to RA Features Widget
-		add_action( 'siteorigin_widgets_enqueue_admin_scripts_rawb-features', array( $this, 'rawb_features_admin_scripts' ), 10, 2 );
-
-		add_action( 'siteorigin_panel_enqueue_admin_scripts', array( $this, 'rawb_features_admin_scripts' ) );
-
 		//* Require if mr_image_resize function doesn't exist
 		if ( !function_exists( 'mr_image_resize' ) ) {
 			require_once( plugin_dir_path( __FILE__ ) . 'lib/classes/mr-image-resize.php' );
@@ -53,11 +48,6 @@ class RA_Widgets_Bundle {
 			// Widget JS
 			wp_register_script( 'rawb-widgets-js', plugin_dir_url( __FILE__ ) . 'public/js/widget.min.js', array( 'jquery' ), null, true );
 		}
-	}
-
-	public function rawb_features_admin_scripts() {
-		wp_register_script( 'rawb-features-js', plugin_dir_url( __FILE__ ) . 'admin/js/features.js', array( 'jquery' ), null, true );
-		wp_enqueue_script( 'rawb-features-js' );
 	}
 
 	public function rawb_widget_folders( $folders ) {
