@@ -2,7 +2,7 @@
 	<div class="cta-wrapper">
 		<?php if ( $display_image == true ) { ?>
 			<div class="cta-image">
-				<?php $this->sub_widget( 'RA_Image_Widget', $args, $instance['image'] ); ?>
+				<?php $this->sub_widget( 'RAWB_Image_Widget', $args, $instance['image'] ); ?>
 			</div>
 		<?php } ?>
 		<div class="cta-text">
@@ -22,7 +22,7 @@
 		</div>
 		<?php if ( $display_button == true ) { ?>
 			<div class="cta-button">
-				<?php $this->sub_widget( 'RA_Button_Widget', $args, $instance['button'] ); ?>
+				<?php $this->sub_widget( 'RAWB_Button_Widget', $args, $instance['button'] ); ?>
 			</div>
 		<?php } ?>
 	</div>

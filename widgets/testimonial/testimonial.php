@@ -6,7 +6,7 @@ Author: Rotsen Mark Acob
 Author URI: http://rotsenacob.com
 */
 
-class RA_Testimonial_Widget extends SiteOrigin_Widget {
+class RAWB_Testimonial_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
             'rawb-testimonial',
@@ -212,4 +212,4 @@ class RA_Testimonial_Widget extends SiteOrigin_Widget {
     }
 }
 
-siteorigin_widget_register( 'rawb-testimonial', __FILE__, 'RA_Testimonial_Widget' );
+siteorigin_widget_register( 'rawb-testimonial', __FILE__, 'RAWB_Testimonial_Widget' );

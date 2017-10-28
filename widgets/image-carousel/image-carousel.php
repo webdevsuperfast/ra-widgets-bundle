@@ -6,7 +6,7 @@ Author: Rotsen Mark Acob
 Author URI: http://rotsenacob.com
 */
 
-class RA_Image_Carousel_Widget extends SiteOrigin_Widget {
+class RAWB_Image_Carousel_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
             'rawb-image-carousel',
@@ -211,4 +211,4 @@ class RA_Image_Carousel_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'rawb-image-carousel', __FILE__, 'RA_Image_Carousel_Widget' );
+siteorigin_widget_register( 'rawb-image-carousel', __FILE__, 'RAWB_Image_Carousel_Widget' );

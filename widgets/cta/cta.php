@@ -6,7 +6,7 @@ Author: Rotsen Mark Acob
 Author URI: http://rotsenacob.com
 */
 
-class RA_CTA_Widget extends SiteOrigin_Widget {
+class RAWB_CTA_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
             'rawb-cta',
@@ -23,10 +23,10 @@ class RA_CTA_Widget extends SiteOrigin_Widget {
     }
 
     function initialize() {
-        if( !class_exists('RA_Button_Widget') ) {
+        if( !class_exists('RAWB_Button_Widget') ) {
             SiteOrigin_Widgets_Bundle::single()->include_widget( 'rawb-button' );
         }
-        if( !class_exists('RA_Image_Widget') ) {
+        if( !class_exists('RAWB_Image_Widget') ) {
             SiteOrigin_Widgets_Bundle::single()->include_widget( 'rawb-image' );
         }
     }
@@ -50,13 +50,13 @@ class RA_CTA_Widget extends SiteOrigin_Widget {
             ),
             'image' => array(
             	'type' => 'widget',
-            	'class' => 'RA_Image_Widget',
+            	'class' => 'RAWB_Image_Widget',
             	'label' => __( 'Image', 'ra-widgets-bundle' )
             ),
             'button' => array(
             	'type' => 'widget',
             	'label' => __( 'Button', 'ra-widgets-bundle' ),
-            	'class' => 'RA_Button_Widget'
+            	'class' => 'RAWB_Button_Widget'
             ),
             'settings' => array(
             	'type' => 'section',
@@ -116,14 +116,14 @@ class RA_CTA_Widget extends SiteOrigin_Widget {
     }
 
     function modify_child_widget_form( $child_widget_form, $child_widget ) {
-        if ( get_class( $child_widget ) == 'RA_Image_Widget' ) {
+        if ( get_class( $child_widget ) == 'RAWB_Image_Widget' ) {
             unset( $child_widget_form['settings']['fields']['alignment'] );
             unset( $child_widget_form['title'] );
             unset( $child_widget_form['content'] );
             unset( $child_widget_form['template'] );
         }
 
-        if ( get_class( $child_widget ) == 'RA_Button_Widget' ) {
+        if ( get_class( $child_widget ) == 'RAWB_Button_Widget' ) {
             unset( $child_widget_form['template'] );
         }
         
@@ -150,4 +150,4 @@ class RA_CTA_Widget extends SiteOrigin_Widget {
     }
 }
 
-siteorigin_widget_register( 'rawb-cta', __FILE__, 'RA_CTA_Widget' );
+siteorigin_widget_register( 'rawb-cta', __FILE__, 'RAWB_CTA_Widget' );

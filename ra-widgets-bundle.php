@@ -14,7 +14,7 @@ Domain Path: /languages
 
 defined( 'ABSPATH' ) or die( esc_html_e( 'With great power comes great responsibility.', 'ra-widgets-bundle' ) );
 
-class RA_Widgets_Bundle {
+class RAWB_Widgets_Bundle {
 	public function __construct() {
 		// Enqueue Scripts
 		add_action( 'wp_enqueue_scripts', array( $this, 'rawb_enqueue_scripts' ) );
@@ -57,4 +57,4 @@ class RA_Widgets_Bundle {
 	}
 }
 
-new RA_Widgets_Bundle();
+new RAWB_Widgets_Bundle();

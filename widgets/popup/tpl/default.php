@@ -22,7 +22,7 @@ $attr = array(
         <div class="popup-wrapper">
             <?php if ( $display_image == true ) { ?>
                 <div class="popup-image">
-                    <?php $this->sub_widget( 'RA_Image_Widget', $args, $instance['image'] ); ?>
+                    <?php $this->sub_widget( 'RAWB_Image_Widget', $args, $instance['image'] ); ?>
                 </div>
             <?php } ?>
             <?php if ( $display_content == true ) { ?>

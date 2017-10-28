@@ -20,14 +20,14 @@
   *  @author Matthew Ruddy (http://rivaslider.com)
   */
 
-add_action('delete_attachment', 'mr_delete_resized_images');
+add_action('delete_attachment', 'rawb_delete_resized_images');
 
-function mr_image_resize($url, $width=null, $height=null, $crop=true, $align='c', $retina=false) {
+function rawb_image_resize($url, $width=null, $height=null, $crop=true, $align='c', $retina=false) {
 
   global $wpdb;
 
   // Get common vars (func_get_args() only get specified values)
-  $common = mr_common_info($url, $width, $height, $crop, $align, $retina);
+  $common = rawb_common_info($url, $width, $height, $crop, $align, $retina);
   
   // Unpack vars if got an array...
   if (is_array($common)) extract($common);
@@ -139,7 +139,7 @@ function mr_image_resize($url, $width=null, $height=null, $crop=true, $align='c'
 
 // Returns common information shared by processing functions
 
-function mr_common_info($url, $width, $height, $crop, $align, $retina) {
+function rawb_common_info($url, $width, $height, $crop, $align, $retina) {
 
   // Return null if url empty
   if (empty($url)) {
@@ -232,7 +232,7 @@ function mr_common_info($url, $width, $height, $crop, $align, $retina) {
 
 // Deletes the resized images when the original image is deleted from the WordPress Media Library.
 
-function mr_delete_resized_images($post_id) {
+function rawb_delete_resized_images($post_id) {
 
   // Get attachment image metadata
   $metadata = wp_get_attachment_metadata($post_id);

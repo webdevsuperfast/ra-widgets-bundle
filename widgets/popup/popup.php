@@ -6,7 +6,7 @@ Author: Rotsen Mark Acob
 Author URI: http://rotsenacob.com
 */
 
-class RA_Popup_Widget extends SiteOrigin_Widget {
+class RAWB_Popup_Widget extends SiteOrigin_Widget {
     function __construct() {
         parent::__construct(
             'rawb-popup',
@@ -39,7 +39,7 @@ class RA_Popup_Widget extends SiteOrigin_Widget {
             'image' => array(
                 'type' => 'widget',
                 'label' => __( 'Image', 'ra-widgets-bundle' ),
-                'class' => 'RA_Image_Widget'
+                'class' => 'RAWB_Image_Widget'
             ),
             'content' => array(
                 'type' => 'widget',
@@ -120,7 +120,7 @@ class RA_Popup_Widget extends SiteOrigin_Widget {
 	}
 
     function modify_child_widget_form( $child_widget_form, $child_widget ) {
-        if ( get_class( $child_widget ) == 'RA_Image_Widget' ) {
+        if ( get_class( $child_widget ) == 'RAWB_Image_Widget' ) {
             unset( $child_widget_form['settings']['fields']['alignment'] );
             unset( $child_widget_form['title'] );
             unset( $child_widget_form['content'] );
@@ -135,4 +135,4 @@ class RA_Popup_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'rawb-popup', __FILE__, 'RA_Popup_Widget' );
+siteorigin_widget_register( 'rawb-popup', __FILE__, 'RAWB_Popup_Widget' );
