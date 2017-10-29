@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 
 // CSS
 gulp.task('styles', function(){
-    return gulp.src('public/css/sources/*.scss')
+    return gulp.src('public/scss/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(autoprefixer('> 0%'))
         .pipe(cmq())
@@ -62,6 +62,6 @@ gulp.task('default', ['clean:temp'], function() {
 // Watch
 gulp.task('watch', function() {
     // Watch .scss files
-    gulp.watch(['public/css/sources/*.scss', 'public/css/**/*.scss'], ['styles']);
+    gulp.watch(['public/scss/*.scss', 'public/scss/**/*.scss'], ['styles']);
     gulp.watch(['public/js/sources/*.js'], ['scripts']);
 });
