@@ -23,12 +23,12 @@ class RAWB_Widgets_Bundle {
 		add_filter( 'siteorigin_widgets_widget_folders', array( $this, 'rawb_widget_folders' ) );
 
 		//* Require if mr_image_resize function doesn't exist
-		if ( !function_exists( 'mr_image_resize' ) ) {
-			require_once( plugin_dir_path( __FILE__ ) . 'lib/classes/mr-image-resize.php' );
+		if ( !function_exists( 'rawb_image_resize' ) ) {
+			require_once( plugin_dir_path( __FILE__ ) . 'lib/classes/rawb-image-resize.php' );
 		}
 
 		//* Require if mr_image_resize function exists
-		if ( function_exists( 'mr_image_resize' ) ) {
+		if ( function_exists( 'rawb_image_resize' ) ) {
 			require_once( plugin_dir_path( __FILE__ ) . 'lib/misc.php' );
 		}
 	}
