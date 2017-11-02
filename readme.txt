@@ -77,12 +77,9 @@ The door isn't close to adding some styles in the near future but for now I leav
 
 == Screenshots ==
 
-1. Call-to-Action Widget
-2. Headline Widget
-3. Image Widget
-4. Image Carousel Widget
-5. Popup Content Widget
-6. Testimonial Widget
+1. Button and CTA Widget inside SiteOrigin Widgets screen.
+2. Headline, Image, Image Carousel Widget inside SiteOrigin Widgets screen.
+3. Popup Content, Testimonial Widget inside SiteOrigin Widgets screen.
 
 == Changelog ==
 = 1.0 =
