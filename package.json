@@ -2,10 +2,7 @@
   "name": "ra-widgets-bundle",
   "version": "1.0.0",
   "description": "A collection of widgets for WordPress built using the SiteOrigin Widgets plugin API.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/webdevsuperfast/ra-widgets-bundle"
-  },
+  "repository": "https://github.com/webdevsuperfast/ra-widgets-bundle",
   "keywords": [
     "so-widgets-bundle",
     "siteorigin",
@@ -31,5 +28,14 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "vinyl-paths": "^2.1.0"
+  },
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "bourbon": "^4.3.4",
+    "bourbon-neat": "^1.9.0",
+    "magnific-popup": "^1.1.0",
+    "owl.carousel": "^2.2.0",
+    "sass-flex-mixin": "^1.0.3"
   }
 }

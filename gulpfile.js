@@ -32,8 +32,8 @@ gulp.task('styles', function(){
 // Vendor JS
 gulp.task('scripts', function(){
     return gulp.src([
-        'bower_components/owl.carousel/dist/owl.carousel.js',
-        'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
+        'node_modules/owl.carousel/dist/owl.carousel.js',
+        'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'public/js/sources/*.js'
     ])
     .pipe(foreach(function(stream, file){
