@@ -3,7 +3,7 @@
 Plugin Name: RA Widgets Bundle
 Plugin URI: https://github.com/webdevsuperfast/ra-widgets-bundle
 Description: A collection of widgets for WordPress built using the SiteOrigin Widgets API.
-Version: 	1.0
+Version: 	1.0.1
 Author: 	Rotsen Mark Acob
 Author URI: https://rotsenacob.com
 License: GPL2
