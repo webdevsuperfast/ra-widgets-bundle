@@ -3,8 +3,8 @@ Contributors: frodoBean
 Donate link: https://rotsenacob.com/
 Tags: siteorigin, siteorigin-page-builder, siteorigin-widgets, siteorigin-widgets-api, widgets, bundle
 Requires at least: 4.7
-Tested up to: 4.8.2
-Stable tag: 1.0.0
+Tested up to: 4.8.3
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,10 +82,19 @@ The door isn't close to adding some styles in the near future but for now I leav
 3. Popup Content, Testimonial Widget inside SiteOrigin Widgets screen.
 
 == Changelog ==
+= 1.0.1 =
+* Fix issue with Chrome
+* Migrate package manager to Yarn
+
 = 1.0 =
 * First release
 
 == Upgrade Notice ==
 
+= 1.0.1 =
+Fix issue with Chrome
+Migrate package manager to Yarn
+
 = 1.0 =
 First release
+
