@@ -25,7 +25,7 @@ class RAWB_Popup_Widget extends SiteOrigin_Widget {
 		return array(
 			'title' => array(
 				'type' => 'text',
-				'label' => __('Title', 'ra-widgets-bundle'),
+				'label' => __( 'Title', 'ra-widgets-bundle' ),
 				'default' => ''
 			),
 			'id' => array(

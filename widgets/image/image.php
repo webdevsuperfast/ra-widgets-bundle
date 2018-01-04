@@ -31,9 +31,9 @@ class RAWB_Image_Widget extends SiteOrigin_Widget {
 			),
 			'image' => array(
 				'type' => 'media',
-				'label' => __('Choose an image', 'ra-widgets-bundle'),
-				'choose' => __('Choose image', 'ra-widgets-bundle'),
-				'update' => __('Set image', 'ra-widgets-bundle'),
+				'label' => __( 'Choose an image', 'ra-widgets-bundle' ),
+				'choose' => __( 'Choose image', 'ra-widgets-bundle' ),
+				'update' => __( 'Set image', 'ra-widgets-bundle' ),
 				'library' => 'image'
 			),
 			'settings' => array(
@@ -55,10 +55,10 @@ class RAWB_Image_Widget extends SiteOrigin_Widget {
 						'type' => 'select',
 						'label' => __( 'Alignment', 'ra-widgets-bundle' ),
 						'options' => array(
-							'alignnone' => 'None',
-							'aligncenter' => 'Center',
-							'alignright' => 'Right',
-							'alignleft' => 'Left'
+							'alignnone' => __( 'None', 'ra-widgets-bundle' ),
+							'aligncenter' => __( 'Center', 'ra-widgets-bundle' ),
+							'alignright' => __( 'Right', 'ra-widgets-bundle' ),
+							'alignleft' => __( 'Left', 'ra-widgets-bundle' )
 						),
 						'default' => 'alignnone'
 					)

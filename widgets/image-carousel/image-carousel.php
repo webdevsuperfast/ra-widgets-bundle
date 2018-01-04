@@ -25,7 +25,7 @@ class RAWB_Image_Carousel_Widget extends SiteOrigin_Widget {
 		return array(
 			'title' => array(
 				'type' => 'text',
-				'label' => __('Title', 'ra-widgets-bundle'),
+				'label' => __( 'Title', 'ra-widgets-bundle' ),
 				'default' => ''
 			),
 			'class' => array(
@@ -34,8 +34,8 @@ class RAWB_Image_Carousel_Widget extends SiteOrigin_Widget {
 			),
 			'images' => array(
 				'type' => 'repeater',
-				'label' => __('Add Images', 'ra-widgets-bundle'),
-				'item_name' => __('Image', 'ra-widgets-bundle'),
+				'label' => __( 'Add Images', 'ra-widgets-bundle' ),
+				'item_name' => __( 'Image', 'ra-widgets-bundle' ),
 				'item_label' => array(
 					'selector' => "[id*='image']",
 					'update_event' => 'change',
@@ -44,9 +44,9 @@ class RAWB_Image_Carousel_Widget extends SiteOrigin_Widget {
 				'fields' => array(
 					'image' => array(
 						'type' => 'media',
-						'label' => __('Choose an image', 'ra-widgets-bundle'),
-						'choose' => __('Choose image', 'ra-widgets-bundle'),
-						'update' => __('Set image', 'ra-widgets-bundle'),
+						'label' => __( 'Choose an image', 'ra-widgets-bundle' ),
+						'choose' => __( 'Choose image', 'ra-widgets-bundle' ),
+						'update' => __( 'Set image', 'ra-widgets-bundle' ),
 						'library' => 'image'
 					),
 					'alt' => array(
@@ -56,24 +56,24 @@ class RAWB_Image_Carousel_Widget extends SiteOrigin_Widget {
 					),
 					'link' => array(
 						'type' => 'text',
-						'label' => __('Image link', 'ra-widgets-bundle'),
+						'label' => __( 'Image link', 'ra-widgets-bundle' ),
 						'default' => ''
 					)
 				)
 			),
 			'settings' => array(
 				'type' => 'section',
-				'label' => __( 'Image Settings', 'gss' ),
+				'label' => __( 'Image Settings', 'ra-widgets-bundle' ),
 				'hide' => true,
 				'fields' => array(
 					'imagex' => array(
 						'type' => 'number',
-						'label' => __( 'Image Width', 'gss' ),
+						'label' => __( 'Image Width', 'ra-widgets-bundle' ),
 						'default' => ''
 					),
 					'imagey' => array(
 						'type' => 'number',
-						'label' => __( 'Image Height(optional)', 'gss' ),
+						'label' => __( 'Image Height(optional)', 'ra-widgets-bundle' ),
 						'default' => ''
 					),
 				)
@@ -86,62 +86,62 @@ class RAWB_Image_Carousel_Widget extends SiteOrigin_Widget {
 					'slides' => array(
 						'type' => 'number',
 						'default' => 1,
-						'label' => __( 'Slides', 'gss' )
+						'label' => __( 'Slides', 'ra-widgets-bundle' )
 					),
 					'margin' => array(
 						'type' => 'number',
 						'default' => 0,
-						'label' => __( 'Slide margin', 'gss' ),
+						'label' => __( 'Slide margin', 'ra-widgets-bundle' ),
 					),
 					'duration' => array(
 						'type' => 'number',
 						'default' => 250,
-						'label' => __( 'Duration', 'gss' ),
+						'label' => __( 'Duration', 'ra-widgets-bundle' ),
 					),
 					'speed' => array(
 						'type' => 'number',
 						'default' => 250,
-						'label' => __( 'Speed', 'gss' ),
+						'label' => __( 'Speed', 'ra-widgets-bundle' ),
 					),
 					'autoplay' => array(
 						'type' => 'checkbox',
 						'default' => false,
-						'label' => __( 'Enable autoplay?', 'gss' ),
+						'label' => __( 'Enable autoplay?', 'ra-widgets-bundle' ),
 					),
 					'navigation' => array(
 						'type' => 'checkbox',
 						'default' => true,
-						'label' => __( 'Display navigation?', 'gss' ),
+						'label' => __( 'Display navigation?', 'ra-widgets-bundle' ),
 					),
 					'pagination' => array(
 						'type' => 'checkbox',
 						'default' => false,
-						'label' => __( 'Display pagination?', 'gss' ),
+						'label' => __( 'Display pagination?', 'ra-widgets-bundle' ),
 					),
 					'autoheight' => array(
 						'type' => 'checkbox',
 						'default' => false,
-						'label' => __( 'Enable autoheight?', 'gss' ),
+						'label' => __( 'Enable autoheight?', 'ra-widgets-bundle' ),
 					),
 					'autowidth' => array(
 						'type' => 'checkbox',
 						'default' => false,
-						'label' => __( 'Enable autowidth?', 'gss' ),
+						'label' => __( 'Enable autowidth?', 'ra-widgets-bundle' ),
 					),
 					'center' => array(
 						'type' => 'checkbox',
 						'default' => false,
-						'label' => __( 'Center item', 'gss' ),
+						'label' => __( 'Center item', 'ra-widgets-bundle' ),
 					),
 					'mergefit' => array(
 						'type' => 'checkbox',
 						'default' => false,
-						'label' => __( 'Fit merged items?', 'gss' ),
+						'label' => __( 'Fit merged items?', 'ra-widgets-bundle' ),
 					),
 					'loop' => array(
 						'type' => 'checkbox',
 						'default' => true,
-						'label' => __( 'Loop items?', 'gss' )
+						'label' => __( 'Loop items?', 'ra-widgets-bundle' )
 					)
 				)
 			),

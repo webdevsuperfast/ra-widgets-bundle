@@ -45,8 +45,8 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 				'label' => __( 'Target', 'ra-widgets-bundle' ),
 				'default' => '_self',
 				'options' => array(
-					'_self' => 'Self',
-					'_blank' => 'Blank'
+					'_self' => __( 'Self', 'ra-widgets-bundle' ),
+					'_blank' => __( 'Blank', 'ra-widgets-bundle' )
 				)
 			),
 			'attributes' => array(
