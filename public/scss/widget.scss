@@ -20,6 +20,7 @@ $image-path: '../../images';
 
 // Owl Carousel
 @import '../../node_modules/owl.carousel/src/scss/owl.carousel.scss';
+@import '../../node_modules/owl.carousel/src/scss/owl.theme.default.scss';
 
 // Magnific Popup
 @import '../../node_modules/magnific-popup/src/css/main.scss';
@@ -45,91 +46,20 @@ $image-path: '../../images';
 	transform: translateY(-50%);
 }
 
-/* Image Carousel
+/* ## Default Styles
 ----------------------------------------------------------------------------- */
-.widget_rwpw-image-carousel {
-	.owl-carousel {
-		.owl-item {
-			& > div {
-				@include vertical-align;
-			}
-			img {
-				width: auto !important;
-				margin: 0 auto;
-			}
-		}
-		.owl-nav {
-			position: absolute;
-			width: 100%;
-			left: 0;
-			top: 50%;
-			margin-top: -18px;
-			line-height: 1;
-			min-height: 36px;
-			.material-icons {
-				font-size: 36px;
-			}
-			& > div {
-				position: absolute;
-				left: -36px;
-				&.owl-next {
-					left: auto;
-					right: -36px;
-				}
-			}
-		}
-		.owl-dots {
-			display: block;
-			.owl-dot {
-				text-align: center;
-				display: inline-block;
-				margin: 0 4px;
-				span {
-					width: 10px;
-					height: 10px;
-					background: transparent;
-					border: 1px solid #333;
-					border-radius: 50%;
-					display: block;
-				}
-				&.active {
-					span {
-						background: #333;
-					}
-				}
-			}
+.owl-carousel {
+	.owl-item {
+		img {
+			width: auto !important;
+			margin: 0 auto;
 		}
 	}
 }
 
-/* Side Image Widget
+/* ## Button Widget
 ----------------------------------------------------------------------------- */
-.widget_rwpw-side-image {
-	.side-image-default {
-		.image-wrapper {
-			background-size: cover;
-			background-position: left top;
-			background-repeat: no-repeat;
-			display: block;
-			width: 50%;
-		}
-		.content-wrapper {
-			width: 50%;
-		}
-	}
-	.side-image {
-		@include flexbox;
-		&.right-image {
-			.image-wrapper {
-				order: 2;
-			}
-		}
-	}
-}
-
-/* Button Widget
------------------------------------------------------------------------------ */
-.widget_rwpw-button, .so-widget-rwpw-button {
+.widget_rawb-button, .so-widget-rawb-button {
 	.btn {
 		color: #fff;
 		display: inline-block;
@@ -175,138 +105,4 @@ $image-path: '../../images';
 			width: 100% !important;
 		}
 	}
-}
-
-/* Features Widget
------------------------------------------------------------------------------ */
-.widget_rwpw-features {
-	.features-wrapper {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		.feature {
-			list-style: none;
-			float: left;
-			.feature-content {
-				display: block;
-			}
-		}
-	}
-}
-/** ## Testimonial Widget
------------------------------------------------------------------------------ */
-.widget_rwpw-testimonial {
-	.owl-carousel {
-		.owl-item {
-			img {
-				width: auto !important;
-				margin: 0 auto;
-			}
-		}
-		.owl-nav {
-			position: absolute;
-			width: 100%;
-			left: 0;
-			top: 50%;
-			margin-top: -18px;
-			line-height: 1;
-			min-height: 36px;
-			.material-icons {
-				font-size: 36px;
-			}
-			& > div {
-				position: absolute;
-				left: -36px;
-				&.owl-next {
-					left: auto;
-					right: -36px;
-				}
-			}
-		}
-		.owl-dots {
-			display: block;
-			.owl-dot {
-				text-align: center;
-				display: inline-block;
-				margin: 0 4px;
-				span {
-					width: 10px;
-					height: 10px;
-					background: transparent;
-					border: 1px solid #333;
-					border-radius: 50%;
-					display: block;
-				}
-				&.active {
-					span {
-						background: #333;
-					}
-				}
-			}
-		}
-	}
-}
-
-/** ## Video Widget
------------------------------------------------------------------------------ */
-.widget_rwpw-video-carousel {
-	.owl-carousel {
-		.owl-item {
-			img {
-				width: auto !important;
-				margin: 0 auto;
-			}
-		}
-		.owl-video-play-icon {
-			background-image: url(#{$image-path}/owl.video.play.png);
-		}
-		.owl-nav {
-			position: absolute;
-			width: 100%;
-			left: 0;
-			top: 50%;
-			margin-top: -18px;
-			line-height: 1;
-			min-height: 36px;
-			.material-icons {
-				font-size: 36px;
-			}
-			& > div {
-				position: absolute;
-				left: -36px;
-				&.owl-next {
-					left: auto;
-					right: -36px;
-				}
-			}
-		}
-		.owl-dots {
-			display: block;
-			.owl-dot {
-				text-align: center;
-				display: inline-block;
-				margin: 0 4px;
-				span {
-					width: 10px;
-					height: 10px;
-					background: transparent;
-					border: 1px solid #333;
-					border-radius: 50%;
-					display: block;
-				}
-				&.active {
-					span {
-						background: #333;
-					}
-				}
-			}
-		}
-	}
-}
-
-/* ## Popup Content
------------------------------------------------------------------------------ */
-.rwpw-popup-content {
-	position: relative;
-	margin: 0 auto;
 }
