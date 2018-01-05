@@ -42,9 +42,6 @@ class RAWB_Widgets_Bundle {
 			// Owl Carousel JS
 			wp_register_script( 'rawb-owl-carousel-js', plugin_dir_url( __FILE__ ) . 'public/js/owl.carousel.min.js', array( 'jquery' ), null, true );
 
-			// Magnific Popup JS
-			wp_register_script( 'rawb-magnific-popup-js', plugin_dir_url( __FILE__ ) . 'public/js/jquery.magnific-popup.min.js', array( 'jquery' ), null, true );
-
 			// Widget JS
 			wp_register_script( 'rawb-widgets-js', plugin_dir_url( __FILE__ ) . 'public/js/widget.min.js', array( 'jquery' ), null, true );
 		}

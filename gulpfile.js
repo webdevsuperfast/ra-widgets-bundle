@@ -33,7 +33,6 @@ gulp.task('styles', function(){
 gulp.task('scripts', function(){
     return gulp.src([
         'node_modules/owl.carousel/dist/owl.carousel.js',
-        'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'public/js/sources/*.js'
     ])
     .pipe(foreach(function(stream, file){
