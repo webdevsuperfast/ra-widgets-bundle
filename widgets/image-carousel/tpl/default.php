@@ -18,6 +18,7 @@ echo '<div class="image-carousel-widget">';
 
     $classes[] = 'rawb-image-carousel';
     $classes[] = 'owl-carousel';
+    $classes[] = 'owl-theme';
     $classes[] = $options['class'] ? ' ' . $options['class'] : '';
 
     $attr = array(
