@@ -24,7 +24,6 @@ RA Widgets Bundle is a collection of widgets that uses the SiteOrigin Widgets AP
 * Image Widget
 * Image Carousel Widget
 * Testimonial Widget
-* Popup Content Widget
 * Headline Widget
 
 = Call-to-Action Widget =
@@ -42,10 +41,6 @@ The Image Carousel Widget lets you create a slideshow of images using the [Owl C
 = Testimonial Widget = 
 
 The Testimonial Widget lets you create a slideshow of testimonials using the [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) jQuery plugin. You will need to create a custom post type named 'Testimonial' to be able to use this.
-
-= Popup Content Widget = 
-
-With the combination of the Button Widget and this you can create different set of popups using [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) plugin.
 
 = Headline Widget = 
 
@@ -79,7 +74,7 @@ The door isn't close to adding some styles in the near future but for now I leav
 
 1. Button and CTA Widget inside SiteOrigin Widgets screen.
 2. Headline, Image, Image Carousel Widget inside SiteOrigin Widgets screen.
-3. Popup Content, Testimonial Widget inside SiteOrigin Widgets screen.
+3. Testimonial Widget inside SiteOrigin Widgets screen.
 
 == Changelog ==
 = 1.0.1 =
