@@ -135,26 +135,7 @@
                         }
                     });
                 }
-            }
-
-            // Popup
-            if($('.rawb-popup').length > 0) {
-                $('.rawb-popup').each(function(){
-                    $(this).on('click', function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        var $type = $(this).data('mfp-type')
-                        $(this).magnificPopup({
-                            type: $type,
-                            mainClass: 'mfp-fade',
-                            removalDelay: 160,
-                            preloader: true,
-                            fixedContentPos: true,
-                            closeMarkup: '<a title="%title%" class="mfp-close">&#215;</a>',
-                        }).magnificPopup('open');
-                    });
-                });
-            }            
+            }         
         });
     })();
 })(jQuery);
