@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RA Widgets Bundle\n"
-"POT-Creation-Date: 2018-01-05 08:07+0800\n"
-"PO-Revision-Date: 2018-01-05 08:08+0800\n"
+"POT-Creation-Date: 2018-01-05 09:12+0800\n"
+"PO-Revision-Date: 2018-01-05 09:13+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -33,172 +33,145 @@ msgstr ""
 msgid "A simple button widget"
 msgstr ""
 
-#: widgets/button/button.php:33
+#: widgets/button/button.php:21
 msgid "Button text"
 msgstr ""
 
-#: widgets/button/button.php:37
+#: widgets/button/button.php:25
 msgid "Button class"
 msgstr ""
 
-#: widgets/button/button.php:41 widgets/image/image.php:93
+#: widgets/button/button.php:29 widgets/image/image.php:84
 msgid "URL"
 msgstr ""
 
-#: widgets/button/button.php:45
+#: widgets/button/button.php:33
 msgid "Target"
 msgstr ""
 
-#: widgets/button/button.php:48
+#: widgets/button/button.php:36
 msgid "Self"
 msgstr ""
 
-#: widgets/button/button.php:49
+#: widgets/button/button.php:37
 msgid "Blank"
 msgstr ""
 
-#: widgets/button/button.php:54
+#: widgets/button/button.php:42
 msgid "Add Attribute"
 msgstr ""
 
-#: widgets/button/button.php:55 widgets/button/button.php:64
+#: widgets/button/button.php:43 widgets/button/button.php:52
 msgid "Attribute"
 msgstr ""
 
-#: widgets/button/button.php:69
+#: widgets/button/button.php:57
 msgid "Value"
 msgstr ""
 
-#: widgets/button/button.php:76
+#: widgets/button/button.php:64
 msgid "Button Settings"
 msgstr ""
 
-#: widgets/button/button.php:81 widgets/cta/cta.php:67
-#: widgets/popup/popup.php:51
+#: widgets/button/button.php:69 widgets/cta/cta.php:47
 msgid "Design"
 msgstr ""
 
-#: widgets/button/button.php:83
+#: widgets/button/button.php:71
 msgid "Flat"
 msgstr ""
 
-#: widgets/button/button.php:84
+#: widgets/button/button.php:72
 msgid "Wire"
 msgstr ""
 
-#: widgets/button/button.php:85
+#: widgets/button/button.php:73
 msgid "Rounded"
 msgstr ""
 
-#: widgets/button/button.php:86 widgets/button/button.php:180
-#: widgets/image/image.php:58
+#: widgets/button/button.php:74 widgets/image/image.php:49
 msgid "None"
 msgstr ""
 
-#: widgets/button/button.php:92
+#: widgets/button/button.php:80
 msgid "Background color"
 msgstr ""
 
-#: widgets/button/button.php:96
+#: widgets/button/button.php:84
 msgid "Background hover color"
 msgstr ""
 
-#: widgets/button/button.php:100
+#: widgets/button/button.php:88
 msgid "Text size"
 msgstr ""
 
-#: widgets/button/button.php:105
+#: widgets/button/button.php:93
 msgid "Text color"
 msgstr ""
 
-#: widgets/button/button.php:110
+#: widgets/button/button.php:98
 msgid "Text hover color"
 msgstr ""
 
-#: widgets/button/button.php:115
+#: widgets/button/button.php:103
 msgid "Border Size"
 msgstr ""
 
-#: widgets/button/button.php:120
+#: widgets/button/button.php:108
 msgid "Border radius"
 msgstr ""
 
-#: widgets/button/button.php:125
+#: widgets/button/button.php:113
 msgid "Top &amp; Bottom Padding"
 msgstr ""
 
-#: widgets/button/button.php:130 widgets/image/image.php:46
+#: widgets/button/button.php:118 widgets/image/image.php:37
 msgid "Width"
 msgstr ""
 
-#: widgets/button/button.php:136
+#: widgets/button/button.php:124
 msgid "Icon settings"
 msgstr ""
 
-#: widgets/button/button.php:141
+#: widgets/button/button.php:129
 msgid "Button icon"
 msgstr ""
 
-#: widgets/button/button.php:145
+#: widgets/button/button.php:133
 msgid "Icon size"
 msgstr ""
 
-#: widgets/button/button.php:150
+#: widgets/button/button.php:138
 msgid "Color"
 msgstr ""
 
-#: widgets/button/button.php:155
+#: widgets/button/button.php:143
 msgid "Color hover"
 msgstr ""
 
-#: widgets/button/button.php:160
+#: widgets/button/button.php:148
 msgid "Icon position"
 msgstr ""
 
-#: widgets/button/button.php:163 widgets/image/image.php:61
+#: widgets/button/button.php:151 widgets/image/image.php:52
 msgid "Left"
 msgstr ""
 
-#: widgets/button/button.php:164 widgets/image/image.php:60
+#: widgets/button/button.php:152 widgets/image/image.php:51
 msgid "Right"
 msgstr ""
 
-#: widgets/button/button.php:165 widgets/image/image.php:59
+#: widgets/button/button.php:153 widgets/image/image.php:50
 msgid "Center"
 msgstr ""
 
-#: widgets/button/button.php:172
-msgid "Popup"
-msgstr ""
-
-#: widgets/button/button.php:177
-msgid "Type"
-msgstr ""
-
-#: widgets/button/button.php:181
-msgid "Ajax"
-msgstr ""
-
-#: widgets/button/button.php:182 widgets/cta/cta.php:54
-#: widgets/image-carousel/image-carousel.php:38 widgets/popup/popup.php:41
-msgid "Image"
-msgstr ""
-
-#: widgets/button/button.php:183
-msgid "Inline"
-msgstr ""
-
-#: widgets/button/button.php:184
-msgid "iFrame"
-msgstr ""
-
-#: widgets/button/button.php:191
+#: widgets/button/button.php:160
 msgid "Template"
 msgstr ""
 
-#: widgets/button/button.php:194 widgets/cta/cta.php:69
-#: widgets/image-carousel/image-carousel.php:169 widgets/popup/popup.php:90
-#: widgets/testimonial/testimonial.php:167
+#: widgets/button/button.php:163 widgets/cta/cta.php:49
+#: widgets/image-carousel/image-carousel.php:163
+#: widgets/testimonial/testimonial.php:157
 msgid "Default"
 msgstr ""
 
@@ -210,39 +183,42 @@ msgstr ""
 msgid "A simple CTA widget."
 msgstr ""
 
-#: widgets/cta/cta.php:38 widgets/headline/headline.php:30
-#: widgets/image-carousel/image-carousel.php:28 widgets/image/image.php:30
-#: widgets/image/image.php:97 widgets/popup/popup.php:28
-#: widgets/testimonial/testimonial.php:32
-#: widgets/testimonial/testimonial.php:62
+#: widgets/cta/cta.php:21 widgets/headline/headline.php:21
+#: widgets/image-carousel/image-carousel.php:22 widgets/image/image.php:21
+#: widgets/image/image.php:88 widgets/testimonial/testimonial.php:22
+#: widgets/testimonial/testimonial.php:52
 msgid "Title"
 msgstr ""
 
-#: widgets/cta/cta.php:43 widgets/headline/headline.php:34
+#: widgets/cta/cta.php:25 widgets/headline/headline.php:25
 msgid "Subtitle"
 msgstr ""
 
-#: widgets/cta/cta.php:48 widgets/popup/popup.php:46
+#: widgets/cta/cta.php:29
 msgid "Content"
 msgstr ""
 
-#: widgets/cta/cta.php:58
+#: widgets/cta/cta.php:34 widgets/image-carousel/image-carousel.php:32
+msgid "Image"
+msgstr ""
+
+#: widgets/cta/cta.php:38
 msgid "Button"
 msgstr ""
 
-#: widgets/cta/cta.php:63 widgets/image/image.php:41 widgets/popup/popup.php:67
+#: widgets/cta/cta.php:43 widgets/image/image.php:32
 msgid "Settings"
 msgstr ""
 
-#: widgets/cta/cta.php:75 widgets/popup/popup.php:76
+#: widgets/cta/cta.php:55
 msgid "Display Image"
 msgstr ""
 
-#: widgets/cta/cta.php:80 widgets/popup/popup.php:81
+#: widgets/cta/cta.php:60
 msgid "Display Content"
 msgstr ""
 
-#: widgets/cta/cta.php:85
+#: widgets/cta/cta.php:65
 msgid "Display Button"
 msgstr ""
 
@@ -254,13 +230,13 @@ msgstr ""
 msgid "A simple headline widget."
 msgstr ""
 
-#: widgets/headline/headline.php:38
-#: widgets/image-carousel/image-carousel.php:33 widgets/image/image.php:74
-#: widgets/popup/popup.php:37 widgets/testimonial/testimonial.php:37
+#: widgets/headline/headline.php:29
+#: widgets/image-carousel/image-carousel.php:27 widgets/image/image.php:65
+#: widgets/testimonial/testimonial.php:27
 msgid "Class"
 msgstr ""
 
-#: widgets/headline/headline.php:42
+#: widgets/headline/headline.php:33
 msgid "Headline Template"
 msgstr ""
 
@@ -272,126 +248,126 @@ msgstr ""
 msgid "A simple image carousel widget using Owl Carousel"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:37
+#: widgets/image-carousel/image-carousel.php:31
 msgid "Add Images"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:47 widgets/image/image.php:34
+#: widgets/image-carousel/image-carousel.php:41 widgets/image/image.php:25
 msgid "Choose an image"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:48 widgets/image/image.php:35
+#: widgets/image-carousel/image-carousel.php:42 widgets/image/image.php:26
 msgid "Choose image"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:49 widgets/image/image.php:36
+#: widgets/image-carousel/image-carousel.php:43 widgets/image/image.php:27
 msgid "Set image"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:54 widgets/image/image.php:78
+#: widgets/image-carousel/image-carousel.php:48 widgets/image/image.php:69
 msgid "Alt text"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:59
+#: widgets/image-carousel/image-carousel.php:53
 msgid "Image link"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:66
+#: widgets/image-carousel/image-carousel.php:60
 msgid "Image Settings"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:71
-#: widgets/testimonial/testimonial.php:69
+#: widgets/image-carousel/image-carousel.php:65
+#: widgets/testimonial/testimonial.php:59
 msgid "Image Width"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:76
-#: widgets/testimonial/testimonial.php:74
+#: widgets/image-carousel/image-carousel.php:70
+#: widgets/testimonial/testimonial.php:64
 msgid "Image Height(optional)"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:83
-#: widgets/testimonial/testimonial.php:81
+#: widgets/image-carousel/image-carousel.php:77
+#: widgets/testimonial/testimonial.php:71
 msgid "Slideshow Settings"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:89
-#: widgets/testimonial/testimonial.php:87
+#: widgets/image-carousel/image-carousel.php:83
+#: widgets/testimonial/testimonial.php:77
 msgid "Slides"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:94
-#: widgets/testimonial/testimonial.php:92
+#: widgets/image-carousel/image-carousel.php:88
+#: widgets/testimonial/testimonial.php:82
 msgid "Slide margin"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:99
-#: widgets/testimonial/testimonial.php:97
+#: widgets/image-carousel/image-carousel.php:93
+#: widgets/testimonial/testimonial.php:87
 msgid "Duration"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:104
-#: widgets/testimonial/testimonial.php:102
+#: widgets/image-carousel/image-carousel.php:98
+#: widgets/testimonial/testimonial.php:92
 msgid "Speed"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:109
-#: widgets/testimonial/testimonial.php:107
+#: widgets/image-carousel/image-carousel.php:103
+#: widgets/testimonial/testimonial.php:97
 msgid "Enable autoplay?"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:114
-#: widgets/testimonial/testimonial.php:112
+#: widgets/image-carousel/image-carousel.php:108
+#: widgets/testimonial/testimonial.php:102
 msgid "Display navigation?"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:119
-#: widgets/testimonial/testimonial.php:117
+#: widgets/image-carousel/image-carousel.php:113
+#: widgets/testimonial/testimonial.php:107
 msgid "Display pagination?"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:124
-#: widgets/testimonial/testimonial.php:122
+#: widgets/image-carousel/image-carousel.php:118
+#: widgets/testimonial/testimonial.php:112
 msgid "Enable autoheight?"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:129
-#: widgets/testimonial/testimonial.php:127
+#: widgets/image-carousel/image-carousel.php:123
+#: widgets/testimonial/testimonial.php:117
 msgid "Enable autowidth?"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:134
-#: widgets/testimonial/testimonial.php:132
+#: widgets/image-carousel/image-carousel.php:128
+#: widgets/testimonial/testimonial.php:122
 msgid "Center item"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:139
-#: widgets/testimonial/testimonial.php:137
+#: widgets/image-carousel/image-carousel.php:133
+#: widgets/testimonial/testimonial.php:127
 msgid "Fit merged items?"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:144
-#: widgets/testimonial/testimonial.php:142
+#: widgets/image-carousel/image-carousel.php:138
+#: widgets/testimonial/testimonial.php:132
 msgid "Loop items?"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:150
-#: widgets/testimonial/testimonial.php:148
+#: widgets/image-carousel/image-carousel.php:144
+#: widgets/testimonial/testimonial.php:138
 msgid "Responsive Settings"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:155
-#: widgets/testimonial/testimonial.php:153
+#: widgets/image-carousel/image-carousel.php:149
+#: widgets/testimonial/testimonial.php:143
 msgid "Slides for mobile"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:160
-#: widgets/testimonial/testimonial.php:158
+#: widgets/image-carousel/image-carousel.php:154
+#: widgets/testimonial/testimonial.php:148
 msgid "Slides for tablets"
 msgstr ""
 
-#: widgets/image-carousel/image-carousel.php:167 widgets/popup/popup.php:88
-#: widgets/testimonial/testimonial.php:165
+#: widgets/image-carousel/image-carousel.php:161
+#: widgets/testimonial/testimonial.php:155
 msgid "Choose template"
 msgstr ""
 
@@ -403,69 +379,48 @@ msgstr ""
 msgid "A simple image widget."
 msgstr ""
 
-#: widgets/image/image.php:51
+#: widgets/image/image.php:42
 msgid "Height"
 msgstr ""
 
-#: widgets/image/image.php:56
+#: widgets/image/image.php:47
 msgid "Alignment"
 msgstr ""
 
-#: widgets/image/image.php:69
+#: widgets/image/image.php:60
 msgid "SEO Settings"
 msgstr ""
 
-#: widgets/image/image.php:82 widgets/popup/popup.php:33
+#: widgets/image/image.php:73
 msgid "ID"
 msgstr ""
 
-#: widgets/image/image.php:88
+#: widgets/image/image.php:79
 msgid "Image Link"
 msgstr ""
 
-#: widgets/image/image.php:101
+#: widgets/image/image.php:92
 msgid "Open in new tab"
 msgstr ""
 
-#: widgets/image/image.php:108
+#: widgets/image/image.php:99
 msgid "Before &amp; After Content"
 msgstr ""
 
-#: widgets/image/image.php:113
+#: widgets/image/image.php:104
 msgid "Before Content"
 msgstr ""
 
-#: widgets/image/image.php:117
+#: widgets/image/image.php:108
 msgid "After Content"
 msgstr ""
 
-#: widgets/image/image.php:121
+#: widgets/image/image.php:112
 msgid "Add paragraphs?"
 msgstr ""
 
-#: widgets/image/image.php:128
+#: widgets/image/image.php:119
 msgid "Image Template"
-msgstr ""
-
-#: widgets/popup/popup.php:13
-msgid "RA Popup"
-msgstr ""
-
-#: widgets/popup/popup.php:15
-msgid ""
-"A simple popup content builder to be used together with the RA Button Widget"
-msgstr ""
-
-#: widgets/popup/popup.php:55
-msgid "Popup Width"
-msgstr ""
-
-#: widgets/popup/popup.php:60
-msgid "Background"
-msgstr ""
-
-#: widgets/popup/popup.php:71
-msgid "Display Title"
 msgstr ""
 
 #: widgets/testimonial/testimonial.php:13
@@ -476,35 +431,35 @@ msgstr ""
 msgid "A simple testimonial widget using Owl Carousel"
 msgstr ""
 
-#: widgets/testimonial/testimonial.php:41
+#: widgets/testimonial/testimonial.php:31
 msgid "Testimonial Settings"
 msgstr ""
 
-#: widgets/testimonial/testimonial.php:46
+#: widgets/testimonial/testimonial.php:36
 msgid "Number of testimonial to show"
 msgstr ""
 
-#: widgets/testimonial/testimonial.php:51
+#: widgets/testimonial/testimonial.php:41
 msgid "Sort Order"
 msgstr ""
 
-#: widgets/testimonial/testimonial.php:53
+#: widgets/testimonial/testimonial.php:43
 msgid "Ascending"
 msgstr ""
 
-#: widgets/testimonial/testimonial.php:54
+#: widgets/testimonial/testimonial.php:44
 msgid "Descending"
 msgstr ""
 
-#: widgets/testimonial/testimonial.php:60
+#: widgets/testimonial/testimonial.php:50
 msgid "Sort by"
 msgstr ""
 
-#: widgets/testimonial/testimonial.php:63
+#: widgets/testimonial/testimonial.php:53
 msgid "Date"
 msgstr ""
 
-#: widgets/testimonial/tpl/default.php:82
+#: widgets/testimonial/tpl/default.php:85
 msgid "No testimonials found."
 msgstr ""
 
