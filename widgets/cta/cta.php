@@ -18,18 +18,15 @@ class RAWB_CTA_Widget extends SiteOrigin_Widget {
             array(
                 'title' => array(
                     'type' => 'text',
-                    'label' => __( 'Title', 'ra-widgets-bundle' ),
-                    'default' => __( '', 'ra-widgets-bundle' )
+                    'label' => __( 'Title', 'ra-widgets-bundle' )
                 ),
                 'subtitle' => array(
                     'type' => 'text',
-                    'label' => __( 'Subtitle', 'ra-widgets-bundle' ),
-                    'default' => __( '', 'ra-widgets-bundle' )
+                    'label' => __( 'Subtitle', 'ra-widgets-bundle' )
                 ),
                 'content' => array(
                     'type' => 'textarea',
-                    'label' => __( 'Content', 'ra-widgets-bundle' ),
-                    'default' => __( '', 'ra-widgets-bundle' )
+                    'label' => __( 'Content', 'ra-widgets-bundle' )
                 ),
                 'image' => array(
                     'type' => 'widget',
