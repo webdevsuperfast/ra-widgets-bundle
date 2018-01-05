@@ -14,191 +14,161 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
             array(
                 'description' => __( 'A simple button widget', 'ra-widgets-bundle' ),
             ),
+            array(),
             array(
-
-            ),
-            false,
-            plugin_dir_path( __FILE__ ) . 'widgets'
-        );
-    }
-
-    function initialize() {
-
-    }
-
-    function get_widget_form() {
-        return array(
-        	'text' => array(
-        		'type' => 'text',
-        		'label' => __( 'Button text', 'ra-widgets-bundle' ),
-        	),
-        	'class' => array(
-        		'type' => 'text',
-        		'label' => __( 'Button class', 'ra-widgets-bundle' ),
-    		),
-			'url' => array(
-				'type' => 'link',
-				'label' => __( 'URL', 'ra-widgets-bundle' )
-			),
-			'target' => array(
-				'type' => 'select',
-				'label' => __( 'Target', 'ra-widgets-bundle' ),
-				'default' => '_self',
-				'options' => array(
-					'_self' => __( 'Self', 'ra-widgets-bundle' ),
-					'_blank' => __( 'Blank', 'ra-widgets-bundle' )
-				)
-			),
-			'attributes' => array(
-				'type' => 'repeater',
-				'label' => __('Add Attribute', 'ra-widgets-bundle'),
-				'item_name' => __('Attribute', 'ra-widgets-bundle'),
-				'item_label' => array(
-					'selector' => "[id*='attribute']",
-					'update_event' => 'change',
-					'value_method' => 'val'
+				'text' => array(
+					'type' => 'text',
+					'label' => __( 'Button text', 'ra-widgets-bundle' ),
 				),
-				'fields' => array(
-					'attribute' => array(
-						'type' => 'text',
-						'label' => __( 'Attribute', 'ra-widgets-bundle' ),
-						'default' => ''
-					),
-					'value' => array(
-						'type' => 'text',
-						'label' => __('Value', 'ra-widgets-bundle'),
-						'default' => '',
+				'class' => array(
+					'type' => 'text',
+					'label' => __( 'Button class', 'ra-widgets-bundle' ),
+				),
+				'url' => array(
+					'type' => 'link',
+					'label' => __( 'URL', 'ra-widgets-bundle' )
+				),
+				'target' => array(
+					'type' => 'select',
+					'label' => __( 'Target', 'ra-widgets-bundle' ),
+					'default' => '_self',
+					'options' => array(
+						'_self' => __( 'Self', 'ra-widgets-bundle' ),
+						'_blank' => __( 'Blank', 'ra-widgets-bundle' )
 					)
-				)
-			),
-        	'settings' => array(
-        		'type' => 'section',
-        		'label' => __( 'Button Settings', 'ra-widgets-bundle' ),
-        		'hide' => true,
-        		'fields' => array(
-        			'design' => array(
-        				'type' => 'select',
-        				'label' => __( 'Design', 'ra-widgets-bundle' ),
-        				'options' => array(
-        					'flat' => __( 'Flat', 'ra-widgets-bundle' ),
-        					'wire' => __( 'Wire', 'ra-widgets-bundle' ),
-        					'rounded' => __( 'Rounded', 'ra-widgets-bundle' ),
-                            'none' => __( 'None', 'ra-widgets-bundle' )
-        				),
-        				'default' => 'rounded'
-        			),
-        			'background' => array(
-        				'type' => 'color',
-        				'label' => __( 'Background color', 'ra-widgets-bundle' ),
-        			),
-        			'background_hover' => array(
-        				'type' => 'color',
-        				'label' => __( 'Background hover color', 'ra-widgets-bundle' )
-        			),
-					'text_size' => array(
-						'type' => 'number',
-						'label' => __( 'Text size', 'ra-widgets-bundle' ),
-						'default' => '16'
+				),
+				'attributes' => array(
+					'type' => 'repeater',
+					'label' => __('Add Attribute', 'ra-widgets-bundle'),
+					'item_name' => __('Attribute', 'ra-widgets-bundle'),
+					'item_label' => array(
+						'selector' => "[id*='attribute']",
+						'update_event' => 'change',
+						'value_method' => 'val'
 					),
-        			'text_color' => array(
-        				'type' => 'color',
-        				'label' => __( 'Text color', 'ra-widgets-bundle' ),
-        				'default' => '#fff'
-        			),
-        			'text_hover' => array(
-        				'type' => 'color',
-        				'label' => __( 'Text hover color', 'ra-widgets-bundle' ),
-        				'default' => '#fff'
-        			),
-        			'border' => array(
-        				'type' => 'number',
-        				'label' => __( 'Border Size', 'ra-widgets-bundle' ),
-        				'default' => '1'
-        			),
-        			'border_radius' => array(
-        				'type' => 'number',
-        				'label' => __( 'Border radius', 'ra-widgets-bundle' ),
-        				'default' => '3'
-        			),
-					'padding' => array(
-						'type' => 'number',
-						'label' => __( 'Top &amp; Bottom Padding', 'ra-widgets-bundle' ),
-						'default' => ''
-					),
-					'width' => array(
-						'type' => 'number',
-						'label' => __( 'Width', 'ra-widgets-bundle' )
-					)
-        		)
-        	),
-        	'icon' => array(
-        		'type' => 'section',
-        		'label' => __( 'Icon settings', 'ra-widgets-bundle' ),
-        		'hide' => true,
-        		'fields' => array(
-        			'icon' => array(
-        				'type' => 'icon',
-        				'label' => __( 'Button icon', 'ra-widgets-bundle' )
-        			),
-        			'size' => array(
-        				'type' => 'number',
-        				'label' => __( 'Icon size', 'ra-widgets-bundle' ),
-        				'default' => '16'
-        			),
-					'color' => array(
-						'type' => 'color',
-						'label' => __( 'Color', 'ra-widgets-bundle' ),
-						'default' => '#fff'
-					),
-					'color_hover' => array(
-						'type' => 'color',
-						'label' => __( 'Color hover', 'ra-widgets-bundle' ),
-						'default' => '#fff'
-					),
-        			'position' => array(
-        				'type' => 'select',
-        				'label' => __( 'Icon position', 'ra-widgets-bundle' ),
-        				'default' => 'left',
-        				'options' => array(
-        					'left' => __( 'Left', 'ra-widgets-bundle' ),
-        					'right' => __( 'Right', 'ra-widgets-bundle' ),
-							'center' => __( 'Center', 'ra-widgets-bundle' )
-        				)
-        			)
-        		)
-        	),
-			'popup' => array(
-				'type' => 'section',
-				'label' => __( 'Popup', 'ra-widgets-bundle' ),
-				'hide' => true,
-				'fields' => array(
-					'type' => array(
-						'type' => 'select',
-						'label' => __( 'Type', 'ra-widgets-bundle' ),
-						'default' => 'none',
-						'options' => array(
-							'none' => __( 'None', 'ra-widgets-bundle' ),
-							'ajax' => __( 'Ajax', 'ra-widgets-bundle' ),
-							'image' => __( 'Image', 'ra-widgets-bundle' ),
-							'inline' => __( 'Inline', 'ra-widgets-bundle' ),
-							'iframe' => __( 'iFrame', 'ra-widgets-bundle' )
+					'fields' => array(
+						'attribute' => array(
+							'type' => 'text',
+							'label' => __( 'Attribute', 'ra-widgets-bundle' ),
+							'default' => ''
+						),
+						'value' => array(
+							'type' => 'text',
+							'label' => __('Value', 'ra-widgets-bundle'),
+							'default' => '',
 						)
-					),
+					)
+				),
+				'settings' => array(
+					'type' => 'section',
+					'label' => __( 'Button Settings', 'ra-widgets-bundle' ),
+					'hide' => true,
+					'fields' => array(
+						'design' => array(
+							'type' => 'select',
+							'label' => __( 'Design', 'ra-widgets-bundle' ),
+							'options' => array(
+								'flat' => __( 'Flat', 'ra-widgets-bundle' ),
+								'wire' => __( 'Wire', 'ra-widgets-bundle' ),
+								'rounded' => __( 'Rounded', 'ra-widgets-bundle' ),
+								'none' => __( 'None', 'ra-widgets-bundle' )
+							),
+							'default' => 'rounded'
+						),
+						'background' => array(
+							'type' => 'color',
+							'label' => __( 'Background color', 'ra-widgets-bundle' ),
+						),
+						'background_hover' => array(
+							'type' => 'color',
+							'label' => __( 'Background hover color', 'ra-widgets-bundle' )
+						),
+						'text_size' => array(
+							'type' => 'number',
+							'label' => __( 'Text size', 'ra-widgets-bundle' ),
+							'default' => '16'
+						),
+						'text_color' => array(
+							'type' => 'color',
+							'label' => __( 'Text color', 'ra-widgets-bundle' ),
+							'default' => '#fff'
+						),
+						'text_hover' => array(
+							'type' => 'color',
+							'label' => __( 'Text hover color', 'ra-widgets-bundle' ),
+							'default' => '#fff'
+						),
+						'border' => array(
+							'type' => 'number',
+							'label' => __( 'Border Size', 'ra-widgets-bundle' ),
+							'default' => '1'
+						),
+						'border_radius' => array(
+							'type' => 'number',
+							'label' => __( 'Border radius', 'ra-widgets-bundle' ),
+							'default' => '3'
+						),
+						'padding' => array(
+							'type' => 'number',
+							'label' => __( 'Top &amp; Bottom Padding', 'ra-widgets-bundle' ),
+							'default' => ''
+						),
+						'width' => array(
+							'type' => 'number',
+							'label' => __( 'Width', 'ra-widgets-bundle' )
+						)
+					)
+				),
+				'icon' => array(
+					'type' => 'section',
+					'label' => __( 'Icon settings', 'ra-widgets-bundle' ),
+					'hide' => true,
+					'fields' => array(
+						'icon' => array(
+							'type' => 'icon',
+							'label' => __( 'Button icon', 'ra-widgets-bundle' )
+						),
+						'size' => array(
+							'type' => 'number',
+							'label' => __( 'Icon size', 'ra-widgets-bundle' ),
+							'default' => '16'
+						),
+						'color' => array(
+							'type' => 'color',
+							'label' => __( 'Color', 'ra-widgets-bundle' ),
+							'default' => '#fff'
+						),
+						'color_hover' => array(
+							'type' => 'color',
+							'label' => __( 'Color hover', 'ra-widgets-bundle' ),
+							'default' => '#fff'
+						),
+						'position' => array(
+							'type' => 'select',
+							'label' => __( 'Icon position', 'ra-widgets-bundle' ),
+							'default' => 'left',
+							'options' => array(
+								'left' => __( 'Left', 'ra-widgets-bundle' ),
+								'right' => __( 'Right', 'ra-widgets-bundle' ),
+								'center' => __( 'Center', 'ra-widgets-bundle' )
+							)
+						)
+					)
+				),
+				'template' => array(
+					'type' => 'select',
+					'label' => __( 'Template', 'ra-widgets-bundle' ),
+					'default' => 'none',
+					'options' => array(
+						'default' => __( 'Default', 'ra-widgets-bundle' ),
+					)
 				)
 			),
-			'template' => array(
-				'type' => 'select',
-				'label' => __( 'Template', 'ra-widgets-bundle' ),
-				'default' => 'none',
-				'options' => array(
-					'default' => __( 'Default', 'ra-widgets-bundle' ),
-				)
-			)
+            plugin_dir_path( __FILE__ ) . 'widgets/'
         );
     }
 
 	function get_template_variables( $instance, $args ) {
-		// $variables = array();
 		$variables = array(
 			'title' => $instance['text'],
 			'class' => $instance['class'],
@@ -218,7 +188,6 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 			'icon_size' => $instance['icon']['size'],
             'icon_color' => $instance['icon']['color'],
 			'icon_position' => $instance['icon']['position'],
-            'popup_type' => $instance['popup']['type'],
 			'attrs' => $instance['attributes']
 		);
 
