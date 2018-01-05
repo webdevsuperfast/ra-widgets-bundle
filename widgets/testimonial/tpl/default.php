@@ -12,7 +12,10 @@ $classes = array();
 $classes[] = 'rawb-testimonial';
 $classes[] = 'owl-carousel';
 $classes[] = 'owl-theme';
-$classes[] = $class;
+
+if ( $class ) {
+    $classes[] = $class;
+}
 
 $attributes = array(
     'class' => esc_attr( implode( ' ', $classes ) ),
