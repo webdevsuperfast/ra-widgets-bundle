@@ -3,7 +3,7 @@ Contributors: frodoBean
 Donate link: https://rotsenacob.com/
 Tags: siteorigin, siteorigin-page-builder, siteorigin-widgets, siteorigin-widgets-api, widgets, bundle
 Requires at least: 4.7
-Tested up to: 4.8.3
+Tested up to: 4.9.1
 Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -58,7 +58,7 @@ The widget lets you have a headline together with a subheadline.
 
 == Installation ==
 
-2. Upload the plugin files to the `/wp-content/plugins/ra-widgets-bundle` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/ra-widgets-bundle` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through 'Plugins' screen in WordPress.
 
 == Frequently Asked Questions ==
@@ -97,4 +97,3 @@ Migrate package manager to Yarn
 
 = 1.0 =
 First release
-

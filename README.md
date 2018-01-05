@@ -4,10 +4,8 @@ RA Widgets Bundle is a collection of widgets that uses the SiteOrigin Widgets AP
 
 ## Installation
 
-1. Download latest release from [GitHub](https://github.com/webdevsuperfast/ra-widgets-bundle/releases) repository.
-2. Extract and rename it to `ra-widgets-bundle`.
-3. Copy or move the folder to your `plugins` folder.
-4. Activate. [SiteOrigin Widgets Bundle](https://wordpress.org/plugins/so-widgets-bundle/) must be installed and activated first.
+1. Upload the plugin files to the `/wp-content/plugins/ra-widgets-bundle` directory, or install the plugin through the WordPress plugins screen directly.
+2. Activate the plugin through 'Plugins' screen in WordPress.
 
 ## Features
 
@@ -16,11 +14,10 @@ RA Widgets Bundle is a collection of widgets that uses the SiteOrigin Widgets AP
     - Use your own style
     - Use your own widget template
 3. Call-to-Action Widget
-4. Features Widget
+4. Headline Widget
 5. Button Widget
 6. Image Widget
-7. List Widget
+7. Popup Content Widget
 8. Image Carousel Widget
-9. Side Image Widget
-10. Testimonial Widget
-11. More to come...
+9. Testimonial Widget
+10. More to come...
