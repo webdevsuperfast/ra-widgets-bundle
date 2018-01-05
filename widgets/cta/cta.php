@@ -14,11 +14,64 @@ class RAWB_CTA_Widget extends SiteOrigin_Widget {
             array(
                 'description' => __( 'A simple CTA widget.', 'ra-widgets-bundle' ),
             ),
+            array(),
             array(
-
+                'title' => array(
+                    'type' => 'text',
+                    'label' => __( 'Title', 'ra-widgets-bundle' ),
+                    'default' => __( '', 'ra-widgets-bundle' )
+                ),
+                'subtitle' => array(
+                    'type' => 'text',
+                    'label' => __( 'Subtitle', 'ra-widgets-bundle' ),
+                    'default' => __( '', 'ra-widgets-bundle' )
+                ),
+                'content' => array(
+                    'type' => 'textarea',
+                    'label' => __( 'Content', 'ra-widgets-bundle' ),
+                    'default' => __( '', 'ra-widgets-bundle' )
+                ),
+                'image' => array(
+                    'type' => 'widget',
+                    'class' => 'RAWB_Image_Widget',
+                    'label' => __( 'Image', 'ra-widgets-bundle' )
+                ),
+                'button' => array(
+                    'type' => 'widget',
+                    'label' => __( 'Button', 'ra-widgets-bundle' ),
+                    'class' => 'RAWB_Button_Widget'
+                ),
+                'settings' => array(
+                    'type' => 'section',
+                    'label' => __( 'Settings', 'ra-widgets-bundle' ),
+                    'fields' => array(
+                        'design' => array(
+                            'type' => 'select',
+                            'label' => __( 'Design', 'ra-widgets-bundle' ),
+                            'options' => array(
+                                'default' => __( 'Default', 'ra-widgets-bundle' )
+                            ),
+                            'default' => 'default'
+                        ),
+                        'display_image' => array(
+                            'type' => 'checkbox',
+                            'label' => __( 'Display Image', 'ra-widgets-bundle' ),
+                            'default' => true
+                        ),
+                        'display_content' => array(
+                            'type' => 'checkbox',
+                            'label' => __( 'Display Content', 'ra-widgets-bundle' ),
+                            'default' => true
+                        ),
+                        'display_button' => array(
+                            'type' => 'checkbox',
+                            'label' => __( 'Display Button', 'ra-widgets-bundle' ),
+                            'default' => true
+                        )
+                    )
+                )
             ),
-            false,
-            plugin_dir_path( __FILE__ ) . 'widgets'
+            plugin_dir_path( __FILE__ ) . 'widgets/'
         );
     }
 
@@ -29,65 +82,6 @@ class RAWB_CTA_Widget extends SiteOrigin_Widget {
         if( !class_exists('RAWB_Image_Widget') ) {
             SiteOrigin_Widgets_Bundle::single()->include_widget( 'rawb-image' );
         }
-    }
-
-    function get_widget_form() {
-        return array(
-            'title' => array(
-                'type' => 'text',
-                'label' => __( 'Title', 'ra-widgets-bundle' ),
-                'default' => __( '', 'ra-widgets-bundle' )
-            ),
-            'subtitle' => array(
-                'type' => 'text',
-                'label' => __( 'Subtitle', 'ra-widgets-bundle' ),
-                'default' => __( '', 'ra-widgets-bundle' )
-            ),
-            'content' => array(
-                'type' => 'textarea',
-                'label' => __( 'Content', 'ra-widgets-bundle' ),
-                'default' => __( '', 'ra-widgets-bundle' )
-            ),
-            'image' => array(
-            	'type' => 'widget',
-            	'class' => 'RAWB_Image_Widget',
-            	'label' => __( 'Image', 'ra-widgets-bundle' )
-            ),
-            'button' => array(
-            	'type' => 'widget',
-            	'label' => __( 'Button', 'ra-widgets-bundle' ),
-            	'class' => 'RAWB_Button_Widget'
-            ),
-            'settings' => array(
-            	'type' => 'section',
-            	'label' => __( 'Settings', 'ra-widgets-bundle' ),
-            	'fields' => array(
-            		'design' => array(
-            			'type' => 'select',
-            			'label' => __( 'Design', 'ra-widgets-bundle' ),
-            			'options' => array(
-            				'default' => __( 'Default', 'ra-widgets-bundle' )
-            			),
-            			'default' => 'default'
-            		),
-            		'display_image' => array(
-            			'type' => 'checkbox',
-            			'label' => __( 'Display Image', 'ra-widgets-bundle' ),
-            			'default' => true
-            		),
-                    'display_content' => array(
-                        'type' => 'checkbox',
-            			'label' => __( 'Display Content', 'ra-widgets-bundle' ),
-            			'default' => true
-                    ),
-            		'display_button' => array(
-            			'type' => 'checkbox',
-            			'label' => __( 'Display Button', 'ra-widgets-bundle' ),
-            			'default' => true
-            		)
-            	)
-            )
-        );
     }
 
     function get_template_variables( $instance, $args ) {

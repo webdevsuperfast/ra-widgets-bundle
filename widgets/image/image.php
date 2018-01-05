@@ -15,122 +15,116 @@ class RAWB_Image_Widget extends SiteOrigin_Widget {
 				'description' => __( 'A simple image widget.', 'ra-widgets-bundle' ),
 			),
 			array(),
-			false,
-			plugin_dir_path( __FILE__ ) . 'widgets'
-
-		);
-	}
-	function initialize() {
-
-	}
-	function get_widget_form() {
-		return array(
-			'title' => array(
-				'type' => 'text',
-				'label' => __( 'Title', 'ra-widgets-bundle' )
-			),
-			'image' => array(
-				'type' => 'media',
-				'label' => __( 'Choose an image', 'ra-widgets-bundle' ),
-				'choose' => __( 'Choose image', 'ra-widgets-bundle' ),
-				'update' => __( 'Set image', 'ra-widgets-bundle' ),
-				'library' => 'image'
-			),
-			'settings' => array(
-				'type' => 'section',
-				'label' => __( 'Settings', 'ra-widgets-bundle' ),
-				'hide' => true,
-				'fields' => array(
-					'width' => array(
-						'type' => 'number',
-						'label' => __( 'Width', 'ra-widgets-bundle' ),
-						'default' => ''
-					),
-					'height' => array(
-						'type' => 'number',
-						'label' => __( 'Height', 'ra-widgets-bundle' ),
-						'default' => ''
-					),
-					'alignment' => array(
-						'type' => 'select',
-						'label' => __( 'Alignment', 'ra-widgets-bundle' ),
-						'options' => array(
-							'alignnone' => __( 'None', 'ra-widgets-bundle' ),
-							'aligncenter' => __( 'Center', 'ra-widgets-bundle' ),
-							'alignright' => __( 'Right', 'ra-widgets-bundle' ),
-							'alignleft' => __( 'Left', 'ra-widgets-bundle' )
-						),
-						'default' => 'alignnone'
-					)
-				)
-			),
-			'seo' => array(
-				'type' => 'section',
-				'label' => __( 'SEO Settings', 'ra-widgets-bundle' ),
-				'hide' => true,
-				'fields' => array(
-					'class' => array(
-						'type' => 'text',
-						'label' => __( 'Class', 'ra-widgets-bundle' )
-					),
-					'alt' => array(
-						'type' => 'text',
-						'label' => __( 'Alt text', 'ra-widgets-bundle' )
-					),
-					'id' => array(
-						'type' => 'text',
-						'label' => __( 'ID', 'ra-widgets-bundle' )
-					)
-				)
-			),
-			'link' => array(
-				'type' => 'section',
-				'label' => __( 'Image Link', 'ra-widgets-bundle' ),
-				'hide' => true,
-				'fields' => array(
-					'url' => array(
-						'type' => 'link',
-						'label' => __( 'URL', 'ra-widgets-bundle' ),
-					),
-					'title' => array(
-						'type' => 'text',
-						'label' => __( 'Title', 'ra-widgets-bundle' )
-					),
-					'target' => array(
-						'type' => 'checkbox',
-						'label' => __( 'Open in new tab', 'ra-widgets-bundle' ),
-						'default' => false
-					),
-				)
-			),
-			'content' => array(
-				'type' => 'section',
-				'label' => __( 'Before &amp; After Content', 'ra-widgets-bundle' ),
-				'hide' => true,
-				'fields' => array(
-					'before' => array(
-						'type' => 'textarea',
-						'label' => __( 'Before Content', 'ra-widgets-bundle' )
-					),
-					'after' => array(
-						'type' => 'textarea',
-						'label' => __( 'After Content', 'ra-widgets-bundle' )
-					),
-					'autop' => array(
-						'type' => 'checkbox',
-						'label' => __( 'Add paragraphs?', 'ra-widgets-bundle' ),
-						'default' => true
-					)
-				)
-			),
-			'template' => array(
-				'type' => 'select',
-				'label' => __( 'Image Template', 'ra-widgets-bundle' ),
-				'options' => array(
-					'default' => 'Default',
+			array(
+				'title' => array(
+					'type' => 'text',
+					'label' => __( 'Title', 'ra-widgets-bundle' )
 				),
-				'default' => 'default'
-			)
+				'image' => array(
+					'type' => 'media',
+					'label' => __( 'Choose an image', 'ra-widgets-bundle' ),
+					'choose' => __( 'Choose image', 'ra-widgets-bundle' ),
+					'update' => __( 'Set image', 'ra-widgets-bundle' ),
+					'library' => 'image'
+				),
+				'settings' => array(
+					'type' => 'section',
+					'label' => __( 'Settings', 'ra-widgets-bundle' ),
+					'hide' => true,
+					'fields' => array(
+						'width' => array(
+							'type' => 'number',
+							'label' => __( 'Width', 'ra-widgets-bundle' ),
+							'default' => ''
+						),
+						'height' => array(
+							'type' => 'number',
+							'label' => __( 'Height', 'ra-widgets-bundle' ),
+							'default' => ''
+						),
+						'alignment' => array(
+							'type' => 'select',
+							'label' => __( 'Alignment', 'ra-widgets-bundle' ),
+							'options' => array(
+								'alignnone' => __( 'None', 'ra-widgets-bundle' ),
+								'aligncenter' => __( 'Center', 'ra-widgets-bundle' ),
+								'alignright' => __( 'Right', 'ra-widgets-bundle' ),
+								'alignleft' => __( 'Left', 'ra-widgets-bundle' )
+							),
+							'default' => 'alignnone'
+						)
+					)
+				),
+				'seo' => array(
+					'type' => 'section',
+					'label' => __( 'SEO Settings', 'ra-widgets-bundle' ),
+					'hide' => true,
+					'fields' => array(
+						'class' => array(
+							'type' => 'text',
+							'label' => __( 'Class', 'ra-widgets-bundle' )
+						),
+						'alt' => array(
+							'type' => 'text',
+							'label' => __( 'Alt text', 'ra-widgets-bundle' )
+						),
+						'id' => array(
+							'type' => 'text',
+							'label' => __( 'ID', 'ra-widgets-bundle' )
+						)
+					)
+				),
+				'link' => array(
+					'type' => 'section',
+					'label' => __( 'Image Link', 'ra-widgets-bundle' ),
+					'hide' => true,
+					'fields' => array(
+						'url' => array(
+							'type' => 'link',
+							'label' => __( 'URL', 'ra-widgets-bundle' ),
+						),
+						'title' => array(
+							'type' => 'text',
+							'label' => __( 'Title', 'ra-widgets-bundle' )
+						),
+						'target' => array(
+							'type' => 'checkbox',
+							'label' => __( 'Open in new tab', 'ra-widgets-bundle' ),
+							'default' => false
+						),
+					)
+				),
+				'content' => array(
+					'type' => 'section',
+					'label' => __( 'Before &amp; After Content', 'ra-widgets-bundle' ),
+					'hide' => true,
+					'fields' => array(
+						'before' => array(
+							'type' => 'textarea',
+							'label' => __( 'Before Content', 'ra-widgets-bundle' )
+						),
+						'after' => array(
+							'type' => 'textarea',
+							'label' => __( 'After Content', 'ra-widgets-bundle' )
+						),
+						'autop' => array(
+							'type' => 'checkbox',
+							'label' => __( 'Add paragraphs?', 'ra-widgets-bundle' ),
+							'default' => true
+						)
+					)
+				),
+				'template' => array(
+					'type' => 'select',
+					'label' => __( 'Image Template', 'ra-widgets-bundle' ),
+					'options' => array(
+						'default' => 'Default',
+					),
+					'default' => 'default'
+				)
+			),
+			plugin_dir_path( __FILE__ ) . 'widgets/'
+
 		);
 	}
 

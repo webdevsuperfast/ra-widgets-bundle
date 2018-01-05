@@ -15,36 +15,30 @@ class RAWB_Headline_Widget extends SiteOrigin_Widget {
 				'description' => __( 'A simple headline widget.', 'ra-widgets-bundle' ),
 			),
 			array(),
-			false,
-			plugin_dir_path( __FILE__ ) . 'widgets'
-
-		);
-	}
-	function initialize() {
-
-	}
-	function get_widget_form() {
-		return array(
-			'title' => array(
-				'type' => 'text',
-				'label' => __( 'Title', 'ra-widgets-bundle' )
-			),
-			'subtitle' => array(
-				'type' => 'text',
-				'label' => __( 'Subtitle', 'ra-widgets-bundle' )
-			),
-			'class' => array(
-				'type' => 'text',
-				'label' => __( 'Class', 'ra-widgets-bundle' )
-			),
-			'template' => array(
-				'type' => 'select',
-				'label' => __( 'Headline Template', 'ra-widgets-bundle' ),
-				'options' => array(
-					'default' => 'Default',
+			array(
+				'title' => array(
+					'type' => 'text',
+					'label' => __( 'Title', 'ra-widgets-bundle' )
 				),
-				'default' => 'default'
-			)
+				'subtitle' => array(
+					'type' => 'text',
+					'label' => __( 'Subtitle', 'ra-widgets-bundle' )
+				),
+				'class' => array(
+					'type' => 'text',
+					'label' => __( 'Class', 'ra-widgets-bundle' )
+				),
+				'template' => array(
+					'type' => 'select',
+					'label' => __( 'Headline Template', 'ra-widgets-bundle' ),
+					'options' => array(
+						'default' => 'Default',
+					),
+					'default' => 'default'
+				)
+			),
+			plugin_dir_path( __FILE__ ) . 'widgets/'
+
 		);
 	}
 
