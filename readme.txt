@@ -4,7 +4,7 @@ Donate link: https://paypal.me/webdevsuperfast
 Tags: siteorigin, siteorigin-page-builder, siteorigin-widgets, siteorigin-widgets-api, widgets, bundle
 Requires at least: 4.7
 Tested up to: 4.9.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,6 +77,9 @@ The door isn't close to adding some styles in the near future but for now I leav
 3. Testimonial Widget inside SiteOrigin Widgets screen.
 
 == Changelog ==
+= 1.0.3 = 
+* Removed popup content widget files, removed unneeded files, removed screenshots
+
 = 1.0.2 =
 * Removed popup content widget
 * Removed magnific popup script
@@ -92,6 +95,9 @@ The door isn't close to adding some styles in the near future but for now I leav
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+Removed popup content widget files, removed unneeded files, removed screenshots
 
 = 1.0.2 =
 Removed popup content widget
