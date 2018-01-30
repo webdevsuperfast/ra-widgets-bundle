@@ -59,16 +59,11 @@ $loop = new WP_Query( $post_args ); ?>
 
     <div <?php foreach( $attributes as $name => $value ) echo $name . '="' . $value . '" ' ?>>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <?php 
-        $thumbnail = rawb_post_image();
-        $thumb = rawb_thumb( $thumbnail, $width, $height ); 
-        ?>
-                
         <div class="testimonial-wrapper">
             <div class="testimonial-copy">
-                <?php if ( !empty( $thumbnail ) ) { ?>
+                <?php if ( has_post_thumbnail() ) { ?>
                     <div class="testimonial-image">
-                        <?php echo '<img class="alignleft testimonial-image" src="'. $thumb .'" alt="'.get_the_title().'" />'; ?>
+                        <?php echo get_the_post_thumbnail( get_the_ID(), $size ); ?>
                     </div>
                 <?php } ?>
                 <div class="testimonial-content">

@@ -60,15 +60,11 @@ class RAWB_Image_Carousel_Widget extends SiteOrigin_Widget {
 					'label' => __( 'Image Settings', 'ra-widgets-bundle' ),
 					'hide' => true,
 					'fields' => array(
-						'imagex' => array(
-							'type' => 'number',
-							'label' => __( 'Image Width', 'ra-widgets-bundle' ),
-							'default' => ''
-						),
-						'imagey' => array(
-							'type' => 'number',
-							'label' => __( 'Image Height(optional)', 'ra-widgets-bundle' ),
-							'default' => ''
+						'size' => array(
+							'type' => 'select',
+							'label' => __( 'Image Size', 'ra-widgets-bundle' ),
+							'options' => rawb_thumb_sizes(),
+							'default' => 'full'
 						),
 					)
 				),
@@ -185,9 +181,8 @@ class RAWB_Image_Carousel_Widget extends SiteOrigin_Widget {
 	function get_template_variables( $instance, $args ) {
 		return array(
     		'title' => $instance['title'],
-    		'class' => $instance['class'],
-    		'width' => $instance['settings']['imagex'],
-    		'height' => $instance['settings']['imagey'],
+			'class' => $instance['class'],
+			'size' => $instance['settings']['size'],
     		'template' => $instance['template'],
 			'slides' => $instance['slideshow']['slides'],
 			'margin' => $instance['slideshow']['margin'],

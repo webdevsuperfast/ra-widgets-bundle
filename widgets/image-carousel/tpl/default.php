@@ -65,7 +65,7 @@ echo '<div class="image-carousel-widget">';
                 }
                 echo '<div>';
                 echo $link ? '<a href="'.$link.'">' : '';
-                    echo '<img src="'.$src.'" alt="'.$alt.'" />';
+                    echo wp_get_attachment_image( $image['image'], $imageattr['size'] ); // echo '<img src="'.$src.'" alt="'.$alt.'" />';
                 echo $link ? '</a>' : '';
                 echo '</div>';
             } ?>

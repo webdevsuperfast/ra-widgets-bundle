@@ -54,16 +54,12 @@ class RAWB_Testimonial_Widget extends SiteOrigin_Widget {
 							),
 							'default' => 'date'
 						),
-						'imagex' => array(
-							'type' => 'number',
-							'label' => __( 'Image Width', 'ra-widgets-bundle' ),
-							'default' => ''
-						),
-						'imagey' => array(
-							'type' => 'number',
-							'label' => __( 'Image Height(optional)', 'ra-widgets-bundle' ),
-							'default' => ''
-						),
+						'size' => array(
+							'type' => 'select',
+							'label' => __( 'Image Size', 'ra-widgets-bundle' ),
+							'options' => rawb_thumb_sizes(),
+							'default' => 'full'
+						)
 					)
 				),
 				'slideshow' => array(
@@ -182,9 +178,8 @@ class RAWB_Testimonial_Widget extends SiteOrigin_Widget {
     		'title' => $instance['title'],
     		'class' => $instance['class'],
     		'order' => $instance['post']['order'],
-    		'orderby' => $instance['post']['orderby'],
-    		'width' => $instance['post']['imagex'],
-    		'height' => $instance['post']['imagey'],
+			'orderby' => $instance['post']['orderby'],
+			'size' => $instance['post']['size'],
     		'template' => $instance['template'],
 			'slides' => $instance['slideshow']['slides'],
 			'margin' => $instance['slideshow']['margin'],
