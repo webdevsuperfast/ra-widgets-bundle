@@ -15,18 +15,12 @@ $side-image-grid: (
 $image-path: '../../images';
 
 // Imports
-@import '../../node_modules/bourbon/app/assets/stylesheets/_bourbon.scss';
+@import '../../node_modules/bourbon/core/bourbon';
 @import '../../node_modules/bourbon-neat/app/assets/stylesheets/_neat.scss';
 
 // Owl Carousel
 @import '../../node_modules/owl.carousel/src/scss/owl.carousel.scss';
 @import '../../node_modules/owl.carousel/src/scss/owl.theme.default.scss';
-
-// Magnific Popup
-@import '../../node_modules/magnific-popup/src/css/main.scss';
-
-// Flex Mixin
-@import '../../node_modules/sass-flex-mixin/_flex.scss';
 
 //* Icons & Type Alignment Fix
 // @link http://snook.ca/archives/html_and_css/icons-and-type
