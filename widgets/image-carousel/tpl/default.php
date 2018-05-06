@@ -36,7 +36,7 @@ echo '<div class="image-carousel-widget">';
     $attributes['autoplay'] = $options['autoplay'] == true ? 'true' : 'false';
     $attributes['smartspeed'] = $options['duration'] ? (int) $options['duration'] : '250';
     $attributes['fluidspeed'] = $options['speed'] ? (int) $options['speed'] : '250';
-    $attributes['autoheight'] = $options['autoheight'] == true ? 'true' : 'false';
+    $attributes['lazyload'] = $options['lazyload'] == true ? 'true' : 'false';
     $attributes['autowidth'] = $options['autowidth'] == true ? 'true' : 'false';
     $attributes['mergefit'] = $options['mergefit'] == true ? 'true' : 'false';
     $attributes['center'] = $options['center'] == true ? 'true' : 'false';
@@ -58,14 +58,16 @@ echo '<div class="image-carousel-widget">';
                 $imagesource = wp_get_attachment_image_src( $image['image'], 'full' );
                 $url = $imagesource[0];
 
-                if ( $url ) {
-                    $src = rawb_thumb( $url, $imageattr['imagex'] ? $imageattr['imagex'] : 0, $imageattr['imagey'] ? $imageattr['imagey'] : 0 );
-                } else {
-                    $src = $url;
-                }
                 echo '<div>';
                 echo $link ? '<a href="'.$link.'">' : '';
-                    echo wp_get_attachment_image( $image['image'], $imageattr['size'] ); // echo '<img src="'.$src.'" alt="'.$alt.'" />';
+                    if ( $options['lazyload'] ) {
+                        echo wp_get_attachment_image( $image['image'], $imageattr['size'], null, array(
+                            'class' => 'owl-lazy',
+                            'data-src' => wp_get_attachment_image_url( $image['image'], $imageattr['size'] )
+                        ) );
+                    } else {
+                        echo wp_get_attachment_image( $image['image'], $imageattr['size'] );
+                    }
                 echo $link ? '</a>' : '';
                 echo '</div>';
             } ?>

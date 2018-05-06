@@ -32,20 +32,9 @@
                         loop = obj.loop,
                         margin = obj.margin;
 
+                    console.log(lazyload);
+
                     var owl = $('#' + sid);
-
-                    owl.on('initialized.owl.carousel', function(e) {
-                        var curr = $('#' + e.target.id),
-                            maxHeight = 0;
-
-                        curr.find('.owl-item img').each(function() {
-                            if ($(this).height() > maxHeight) {
-                                maxHeight = $(this).height();
-                            }
-                        });
-
-                        curr.find('.owl-item').height(maxHeight);
-                    });
 
                     owl.owlCarousel({
                         items: item,
@@ -56,7 +45,7 @@
                         smartSpeed: smartspeed,
                         fluidSpeed: fluidspeed,
                         loop: loop,
-                        autoHeight: autoheight,
+                        lazyLoad: lazyload,
                         center: center,
                         mergeFit: mergefit,
                         autoWidth: autowidth,

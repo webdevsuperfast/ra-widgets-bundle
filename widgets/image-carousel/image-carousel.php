@@ -108,10 +108,10 @@ class RAWB_Image_Carousel_Widget extends SiteOrigin_Widget {
 							'default' => false,
 							'label' => __( 'Display pagination?', 'ra-widgets-bundle' ),
 						),
-						'autoheight' => array(
+						'lazyload' => array(
 							'type' => 'checkbox',
 							'default' => false,
-							'label' => __( 'Enable autoheight?', 'ra-widgets-bundle' ),
+							'label' => __( 'Enable lazyload?', 'ra-widgets-bundle' ),
 						),
 						'autowidth' => array(
 							'type' => 'checkbox',
@@ -192,7 +192,7 @@ class RAWB_Image_Carousel_Widget extends SiteOrigin_Widget {
 			'navigation' => $instance['slideshow']['navigation'],
 			'pagination' => $instance['slideshow']['pagination'],
 			'autowidth' => $instance['slideshow']['autowidth'],
-			'autoheight' => $instance['slideshow']['autoheight'],
+			'lazyload' => $instance['slideshow']['autoheight'],
 			'center' => $instance['slideshow']['center'],
 			'mergefit' => $instance['slideshow']['mergefit'],
 			'loop' => $instance['slideshow']['loop'],
