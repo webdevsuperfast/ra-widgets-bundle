@@ -22,7 +22,6 @@
                         autoplay = (obj.autoplay == "true"),
                         smartspeed = obj.smartspeed,
                         fluidspeed = obj.fluidspeed,
-                        autoheight = (obj.autoheight == "true"),
                         autowidth = (obj.autowidth == "true"),
                         lazyload = (obj.lazyload == "true"),
                         mergefit = (obj.mergefit == "true"),
@@ -31,8 +30,6 @@
                         slidestablet = obj.slidestablet,
                         loop = obj.loop,
                         margin = obj.margin;
-
-                    console.log(lazyload);
 
                     var owl = $('#' + sid);
 
@@ -84,7 +81,7 @@
                         autoplay = (obj.autoplay == "true"),
                         smartspeed = obj.duration,
                         fluidspeed = obj.speed,
-                        autoheight = (obj.autoheight == "true"),
+                        lazyload = (obj.lazyload == "true"),
                         autowidth = (obj.autowidth == "true"),
                         mergefit = (obj.mergefit == "true"),
                         center = (obj.center == "true"),
@@ -95,6 +92,8 @@
 
                     var owl = $('#' + sid);
 
+                    console.log(navigation);
+
                     owl.owlCarousel({
                         items: item,
                         margin: parseInt(margin),
@@ -104,7 +103,7 @@
                         smartSpeed: smartspeed,
                         fluidSpeed: fluidspeed,
                         loop: loop,
-                        autoHeight: autoheight,
+                        lazyLoad: lazyload,
                         center: center,
                         mergeFit: mergefit,
                         autoWidth: autowidth,
