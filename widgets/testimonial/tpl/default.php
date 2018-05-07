@@ -40,7 +40,7 @@ $vars = array(
     'navigation' => $navigation == true ? "true" : "false",
     'pagination' => $pagination == true ? "true" : "false",
     'autowidth' => $autowidth == true ? "true" : "false",
-    'autoheight' => $autoheight == true ? "true" : "false",
+    'lazyload' => $lazyload == true ? "true" : "false",
     'center' => $center == true ? "true" : "false",
     'mergefit' => $mergefit == true ? "true" : "false",
     'loop' => $loop == true ? "true" : "false",
@@ -63,7 +63,14 @@ $loop = new WP_Query( $post_args ); ?>
             <div class="testimonial-copy">
                 <?php if ( has_post_thumbnail() ) { ?>
                     <div class="testimonial-image">
-                        <?php echo get_the_post_thumbnail( get_the_ID(), $size ); ?>
+                        <?php if ( $lazyload ) { ?>
+                            <?php echo get_the_post_thumbnail( get_the_ID(), $size, array(
+                                'class' => 'owl-lazy',
+                                'data-src' => get_the_post_thumbnail_url( get_the_ID(), $size )
+                            ) ); ?>
+                        <?php } else { ?>
+                            <?php echo get_the_post_thumbnail( get_the_ID(), $size ); ?>
+                        <?php } ?>
                     </div>
                 <?php } ?>
                 <div class="testimonial-content">
