@@ -92,8 +92,6 @@
 
                     var owl = $('#' + sid);
 
-                    console.log(navigation);
-
                     owl.owlCarousel({
                         items: item,
                         margin: parseInt(margin),
