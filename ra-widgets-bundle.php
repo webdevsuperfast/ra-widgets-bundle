@@ -5,7 +5,7 @@ Plugin URI: https://github.com/webdevsuperfast/ra-widgets-bundle
 Description: A collection of widgets for WordPress built using the SiteOrigin Widgets API.
 Version: 	1.0.3
 Author: 	Rotsen Mark Acob
-Author URI: https://rotsenacob.com
+Author URI: https://webdevsuperfast.github.io
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ra-widgets-bundle
