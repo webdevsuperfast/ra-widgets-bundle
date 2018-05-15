@@ -24,7 +24,6 @@ RA Widgets Bundle is a collection of widgets that uses the SiteOrigin Widgets AP
 * Image Widget
 * Image Carousel Widget
 * Testimonial Widget
-* Headline Widget
 
 = Call-to-Action Widget =
 
@@ -41,10 +40,6 @@ The Image Carousel Widget lets you create a slideshow of images using the [Owl C
 = Testimonial Widget = 
 
 The Testimonial Widget lets you create a slideshow of testimonials using the [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) jQuery plugin. You will need to create a custom post type named 'Testimonial' to be able to use this.
-
-= Headline Widget = 
-
-The widget lets you have a headline together with a subheadline.
 
 == TODO ==
 
