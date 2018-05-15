@@ -27,33 +27,22 @@ class RAWB_Image_Widget extends SiteOrigin_Widget {
 					'update' => __( 'Set image', 'ra-widgets-bundle' ),
 					'library' => 'image'
 				),
-				'settings' => array(
-					'type' => 'section',
-					'label' => __( 'Settings', 'ra-widgets-bundle' ),
-					'hide' => true,
-					'fields' => array(
-						'width' => array(
-							'type' => 'number',
-							'label' => __( 'Width', 'ra-widgets-bundle' ),
-							'default' => ''
-						),
-						'height' => array(
-							'type' => 'number',
-							'label' => __( 'Height', 'ra-widgets-bundle' ),
-							'default' => ''
-						),
-						'alignment' => array(
-							'type' => 'select',
-							'label' => __( 'Alignment', 'ra-widgets-bundle' ),
-							'options' => array(
-								'alignnone' => __( 'None', 'ra-widgets-bundle' ),
-								'aligncenter' => __( 'Center', 'ra-widgets-bundle' ),
-								'alignright' => __( 'Right', 'ra-widgets-bundle' ),
-								'alignleft' => __( 'Left', 'ra-widgets-bundle' )
-							),
-							'default' => 'alignnone'
-						)
-					)
+				'size' => array(
+					'type' => 'select',
+					'label' => __( 'Image Size', 'ra-widgets-bundle' ),
+					'options' => rawb_thumb_sizes(),
+					'default' => 'full'
+				),
+				'alignment' => array(
+					'type' => 'select',
+					'label' => __( 'Alignment', 'ra-widgets-bundle' ),
+					'options' => array(
+						'alignnone' => __( 'None', 'ra-widgets-bundle' ),
+						'aligncenter' => __( 'Center', 'ra-widgets-bundle' ),
+						'alignright' => __( 'Right', 'ra-widgets-bundle' ),
+						'alignleft' => __( 'Left', 'ra-widgets-bundle' )
+					),
+					'default' => 'alignnone'
 				),
 				'seo' => array(
 					'type' => 'section',
@@ -145,9 +134,8 @@ class RAWB_Image_Widget extends SiteOrigin_Widget {
 		return array(
 			'image' => $instance['image'],
 			'title' => $instance['title'],
-			'width' => $instance['settings']['width'],
-			'height' => $instance['settings']['height'],
-			'alignment' => $instance['settings']['alignment'],
+			'size' => $instance['size'],
+			'alignment' => $instance['alignment'],
 			'url' => $instance['link']['url'],
 			'target' => $instance['link']['target'],
 			'url_title' => $instance['link']['title'],
