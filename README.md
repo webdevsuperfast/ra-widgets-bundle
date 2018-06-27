@@ -14,8 +14,9 @@ RA Widgets Bundle is a collection of widgets that uses the SiteOrigin Widgets AP
     - Use your own style
     - Use your own widget template
 3. Call-to-Action Widget
-4. Button Widget
-5. Image Widget
-6. Image Carousel Widget
-7. Testimonial Widget
-8. More to come...
+4. Headline Widget
+5. Button Widget
+6. Image Widget
+7. Image Carousel Widget
+8. Testimonial Widget
+9. More to come...
