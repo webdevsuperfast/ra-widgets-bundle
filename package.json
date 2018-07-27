@@ -27,15 +27,15 @@
     "gulp-flatmap": "^1.0.2",
     "gulp-jsbeautifier": "^2.1.2",
     "gulp-notify": "^3.2.0",
-    "gulp-rename": "^1.3.0",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.1",
     "vinyl-paths": "^2.1.0"
   },
   "main": "gulfile.js",
   "private": true,
   "dependencies": {
-    "bourbon": "^5.0.1",
+    "bourbon": "^5.1.0",
     "bourbon-neat": "^3.0.0",
     "owl.carousel": "^2.3.4"
   },
