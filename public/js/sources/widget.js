@@ -1,7 +1,7 @@
 (function($){
     (function fn() {
         fn.now = +new Date;
-        $(window).load(function() {
+        $(window).on('load', function() {
             if (+new Date - fn.now < 500) { 
                 setTimeout(fn, 500);
             }
