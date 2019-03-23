@@ -1,66 +1,90 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
+    sass = require('gulp-dart-sass'),
+    postcss = require('gulp-postcss'),
+    jshint = require('gulp-jshint'),
+    uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
-    cache = require('gulp-cache'),
-    vinylpaths = require('vinyl-paths'),
-    cleancss = require('gulp-clean-css'),
-    cmq = require('gulp-combine-mq'),
-    prettify = require('gulp-jsbeautifier'),
-    concatcss = require('gulp-concat-css'),
-    uglify = require('gulp-uglify'),
+    merge = require('merge-stream'),
     foreach = require('gulp-flatmap'),
     changed = require('gulp-changed'),
-    vinylpaths = require('vinyl-paths'),
-    del = require('del');
+    wpPot = require('gulp-wp-pot'),
+    cssnano = require('cssnano'),
+    cmq = require('css-mqpacker'),
+    autoprefixer = require('autoprefixer');
 
-// CSS
-gulp.task('styles', function(){
-    return gulp.src('public/scss/*.scss')
+var plugins = [
+    autoprefixer,
+    cssnano,
+    cmq
+]
+
+var paths = {
+    styles: {
+        src: 'public/scss/widget.scss',
+        dest: 'public/css'
+    },
+    scripts: {
+        src: [
+            'public/js/sources/widget.js',
+            'node_modules/owl.carousel/dist/owl.carousel.js'
+        ],
+        dest: 'public/js'
+    },
+    languages: {
+        src: '**/*.php',
+        dest: 'languages/ra-widgets-bundle.pot'
+    }
+}
+
+function translation() {
+    return gulp.src(paths.languages.src)
+        .pipe(wpPot())
+        .pipe(gulp.dest(paths.languages.dest))
+}
+
+function scriptsLint() {
+    return gulp.src('public/js/sources/**/*','gulpfile.js')
+        .pipe(jshint('.jshintrc'))
+        .pipe(jshint.reporter('default'))
+}
+
+function style() {
+    
+    return gulp.src(paths.styles.src)
+        .pipe(changed(paths.styles.dest))
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(autoprefixer('> 0%'))
-        .pipe(cmq())
-        .pipe(cleancss())
-        .pipe(gulp.dest('temp/css'))
+        .pipe(concat('app.scss'))
+        .pipe(postcss(plugins))
         .pipe(rename('widget.css'))
-        .pipe(gulp.dest('public/css'))
-        .pipe(notify({ message: 'Source styles task complete' }));
-} );
+        .pipe(gulp.dest(paths.styles.dest))
+        .pipe(notify({ message: 'Styles task complete' }));
+}
 
-// Vendor JS
-gulp.task('scripts', function(){
-    return gulp.src([
-        'node_modules/owl.carousel/dist/owl.carousel.js',
-        'public/js/sources/*.js'
-    ])
-    .pipe(foreach(function(stream, file){
-        return stream
-            .pipe(changed('temp/js'))
-            .pipe(uglify())
-            .pipe(rename({suffix: '.min'}))
-            .pipe(gulp.dest('temp/js'))
-    }))
-    .pipe(gulp.dest('public/js'))
-    .pipe(notify({ message: 'Scripts task complete' }));
-});
+function js() {
+    return gulp.src(paths.scripts.src)
+        .pipe(changed(paths.scripts.dest))
+        .pipe(foreach(function(stream, file){
+            return stream
+                .pipe(uglify())
+                .pipe(rename({suffix: '.min'}))
+        }))
+        .pipe(gulp.dest(paths.scripts.dest))
+        .pipe(notify({ message: 'Scripts task complete' }));
+}
 
-// Clean temp folder
-gulp.task('clean:temp', function(){
-    return gulp.src('temp/*')
-    .pipe(vinylpaths(del))
-});
+function watch() {
+    gulp.watch(['assets/scss/*.scss', 'assets/scss/**/*.scss'], style)
+    gulp.watch(paths.scripts.src, gulp.series(scriptsLint, js))
+    gulp.watch([
+            '*.php',
+            'lib/*',
+            '**/**/*.php'
+        ]
+    )
+}
 
-// Default task
-gulp.task('default', ['clean:temp'], function() {
-    gulp.start('styles', 'watch');
-    gulp.start('scripts', 'watch');
-});
+gulp.task('translation', translation);
 
-// Watch
-gulp.task('watch', function() {
-    // Watch .scss files
-    gulp.watch(['public/scss/*.scss', 'public/scss/**/*.scss'], ['styles']);
-    gulp.watch(['public/js/sources/*.js'], ['scripts']);
-});
+gulp.task('default', gulp.parallel(style, js, watch));
