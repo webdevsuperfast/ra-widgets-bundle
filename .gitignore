@@ -2,3 +2,5 @@ node_modules
 temp
 bower_components
 dploy.yaml
+vendor
+.DS_Store
