@@ -1,21 +1,31 @@
 <?php
-/*
-Widget Name: RA Button
-Description: A simple button widget.
-Author: Rotsen Mark Acob
-Author URI: http://rotsenacob.com
-*/
+/**
+ * Widget Name: RA Button
+ * Description: A simple button widget.
+ * Author: Rotsen Mark Acob
+ * Author URI: http://rotsenacob.com
+ *
+ * @package RA_Widgets_Bundle
+ */
 
+/**
+ * Class RAWB_Button_Widget
+ *
+ * SiteOrigin widget for a customizable button.
+ */
 class RAWB_Button_Widget extends SiteOrigin_Widget {
-    function __construct() {
-        parent::__construct(
-            'rawb-button',
-            __( 'RA Button', 'ra-widgets-bundle' ),
-            array(
-                'description' => __( 'A simple button widget', 'ra-widgets-bundle' ),
-            ),
-            array(),
-            array(
+	/**
+	 * RAWB_Button_Widget constructor.
+	 */
+	public function __construct() {
+		parent::__construct(
+			'rawb-button',
+			__( 'RA Button', 'ra-widgets-bundle' ),
+			array(
+				'description' => __( 'A simple button widget', 'ra-widgets-bundle' ),
+			),
+			array(),
+			array(
 				'text' => array(
 					'type' => 'text',
 					'label' => __( 'Button text', 'ra-widgets-bundle' ),
@@ -26,7 +36,7 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 				),
 				'url' => array(
 					'type' => 'link',
-					'label' => __( 'URL', 'ra-widgets-bundle' )
+					'label' => __( 'URL', 'ra-widgets-bundle' ),
 				),
 				'target' => array(
 					'type' => 'select',
@@ -34,30 +44,30 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 					'default' => '_self',
 					'options' => array(
 						'_self' => __( 'Self', 'ra-widgets-bundle' ),
-						'_blank' => __( 'Blank', 'ra-widgets-bundle' )
-					)
+						'_blank' => __( 'Blank', 'ra-widgets-bundle' ),
+					),
 				),
 				'attributes' => array(
 					'type' => 'repeater',
-					'label' => __('Add Attribute', 'ra-widgets-bundle'),
-					'item_name' => __('Attribute', 'ra-widgets-bundle'),
+					'label' => __( 'Add Attribute', 'ra-widgets-bundle' ),
+					'item_name' => __( 'Attribute', 'ra-widgets-bundle' ),
 					'item_label' => array(
 						'selector' => "[id*='attribute']",
 						'update_event' => 'change',
-						'value_method' => 'val'
+						'value_method' => 'val',
 					),
 					'fields' => array(
 						'attribute' => array(
 							'type' => 'text',
 							'label' => __( 'Attribute', 'ra-widgets-bundle' ),
-							'default' => ''
+							'default' => '',
 						),
 						'value' => array(
 							'type' => 'text',
-							'label' => __('Value', 'ra-widgets-bundle'),
+							'label' => __( 'Value', 'ra-widgets-bundle' ),
 							'default' => '',
-						)
-					)
+						),
+					),
 				),
 				'settings' => array(
 					'type' => 'section',
@@ -71,9 +81,9 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 								'flat' => __( 'Flat', 'ra-widgets-bundle' ),
 								'wire' => __( 'Wire', 'ra-widgets-bundle' ),
 								'rounded' => __( 'Rounded', 'ra-widgets-bundle' ),
-								'none' => __( 'None', 'ra-widgets-bundle' )
+								'none' => __( 'None', 'ra-widgets-bundle' ),
 							),
-							'default' => 'rounded'
+							'default' => 'rounded',
 						),
 						'background' => array(
 							'type' => 'color',
@@ -81,43 +91,43 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 						),
 						'background_hover' => array(
 							'type' => 'color',
-							'label' => __( 'Background hover color', 'ra-widgets-bundle' )
+							'label' => __( 'Background hover color', 'ra-widgets-bundle' ),
 						),
 						'text_size' => array(
 							'type' => 'number',
 							'label' => __( 'Text size', 'ra-widgets-bundle' ),
-							'default' => '16'
+							'default' => '16',
 						),
 						'text_color' => array(
 							'type' => 'color',
 							'label' => __( 'Text color', 'ra-widgets-bundle' ),
-							'default' => '#fff'
+							'default' => '#fff',
 						),
 						'text_hover' => array(
 							'type' => 'color',
 							'label' => __( 'Text hover color', 'ra-widgets-bundle' ),
-							'default' => '#fff'
+							'default' => '#fff',
 						),
 						'border' => array(
 							'type' => 'number',
 							'label' => __( 'Border Size', 'ra-widgets-bundle' ),
-							'default' => '1'
+							'default' => '1',
 						),
 						'border_radius' => array(
 							'type' => 'number',
 							'label' => __( 'Border radius', 'ra-widgets-bundle' ),
-							'default' => '3'
+							'default' => '3',
 						),
 						'padding' => array(
 							'type' => 'number',
 							'label' => __( 'Top &amp; Bottom Padding', 'ra-widgets-bundle' ),
-							'default' => ''
+							'default' => '',
 						),
 						'width' => array(
 							'type' => 'number',
-							'label' => __( 'Width', 'ra-widgets-bundle' )
-						)
-					)
+							'label' => __( 'Width', 'ra-widgets-bundle' ),
+						),
+					),
 				),
 				'icon' => array(
 					'type' => 'section',
@@ -126,22 +136,22 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 					'fields' => array(
 						'icon' => array(
 							'type' => 'icon',
-							'label' => __( 'Button icon', 'ra-widgets-bundle' )
+							'label' => __( 'Button icon', 'ra-widgets-bundle' ),
 						),
 						'size' => array(
 							'type' => 'number',
 							'label' => __( 'Icon size', 'ra-widgets-bundle' ),
-							'default' => '16'
+							'default' => '16',
 						),
 						'color' => array(
 							'type' => 'color',
 							'label' => __( 'Color', 'ra-widgets-bundle' ),
-							'default' => '#fff'
+							'default' => '#fff',
 						),
 						'color_hover' => array(
 							'type' => 'color',
 							'label' => __( 'Color hover', 'ra-widgets-bundle' ),
-							'default' => '#fff'
+							'default' => '#fff',
 						),
 						'position' => array(
 							'type' => 'select',
@@ -150,10 +160,10 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 							'options' => array(
 								'left' => __( 'Left', 'ra-widgets-bundle' ),
 								'right' => __( 'Right', 'ra-widgets-bundle' ),
-								'center' => __( 'Center', 'ra-widgets-bundle' )
-							)
-						)
-					)
+								'center' => __( 'Center', 'ra-widgets-bundle' ),
+							),
+						),
+					),
 				),
 				'template' => array(
 					'type' => 'select',
@@ -161,14 +171,21 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 					'default' => 'none',
 					'options' => array(
 						'default' => __( 'Default', 'ra-widgets-bundle' ),
-					)
-				)
+					),
+				),
 			),
-            plugin_dir_path( __FILE__ ) . 'widgets/'
-        );
-    }
+			plugin_dir_path( __FILE__ ) . 'widgets/'
+		);
+	}
 
-	function get_template_variables( $instance, $args ) {
+	/**
+	 * Get template variables.
+	 *
+	 * @param array $instance Widget instance.
+	 * @param array $args Widget args.
+	 * @return array
+	 */
+	public function get_template_variables( $instance, $args ) {
 		$variables = array(
 			'title' => $instance['text'],
 			'class' => $instance['class'],
@@ -179,27 +196,39 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 			'background_hover' => $instance['settings']['background_hover'],
 			'text_color' => $instance['settings']['text_color'],
 			'text_hover' => $instance['settings']['text_hover'],
-            'text_size' => $instance['settings']['text_size'],
+			'text_size' => $instance['settings']['text_size'],
 			'border' => $instance['settings']['border'],
 			'border_radius' => $instance['settings']['border_radius'],
 			'padding' => $instance['settings']['padding'],
 			'width' => $instance['settings']['width'],
 			'icon' => $instance['icon']['icon'],
 			'icon_size' => $instance['icon']['size'],
-            'icon_color' => $instance['icon']['color'],
+			'icon_color' => $instance['icon']['color'],
 			'icon_position' => $instance['icon']['position'],
-			'attrs' => $instance['attributes']
+			'attrs' => $instance['attributes'],
 		);
 
 		return $variables;
 	}
 
-    function get_template_name( $instance ) {
+	/**
+	 * Get template name.
+	 *
+	 * @param array $instance Widget instance.
+	 * @return string
+	 */
+	public function get_template_name( $instance ) {
 		return 'default';
-    }
+	}
 
-    function get_style_name( $instance ) {
-		switch( $instance['settings']['design'] ) {
+	/**
+	 * Get style name.
+	 *
+	 * @param array $instance Widget instance.
+	 * @return string
+	 */
+	public function get_style_name( $instance ) {
+		switch ( $instance['settings']['design'] ) {
 			case 'rounded':
 			default:
 				return 'default';
@@ -210,13 +239,19 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 			case 'wire':
 				return 'wire';
 				break;
-            case 'none':
-                return '';
-                break;
+			case 'none':
+				return '';
+				break;
 		}
-    }
+	}
 
-	function get_less_variables( $instance ) {
+	/**
+	 * Get LESS variables for styling.
+	 *
+	 * @param array $instance Widget instance.
+	 * @return array
+	 */
+	public function get_less_variables( $instance ) {
 		return array(
 			'background' => $instance['settings']['background'],
 			'background_hover' => $instance['settings']['background_hover'],
@@ -229,21 +264,28 @@ class RAWB_Button_Widget extends SiteOrigin_Widget {
 			'width' => $instance['settings']['width'] . 'px',
 			'icon' => $instance['icon']['icon'],
 			'icon_size' => $instance['icon']['size'] . 'px',
-            'icon_color' => $instance['icon']['color'],
-            'icon_hover' => $instance['icon']['color_hover'],
+			'icon_color' => $instance['icon']['color'],
+			'icon_hover' => $instance['icon']['color_hover'],
 			'icon_position' => $instance['icon']['position'],
-            'text_size' => $instance['settings']['text_size'] . 'px'
 		);
 	}
 
-    function modify_instance( $instance ) {
-        if ( empty( $instance['text'] ) ) {
-            if ( isset( $instance['title'] ) ) $instance['text'] = $instance['title'];
+	/**
+	 * Modify instance for backwards compatibility.
+	 *
+	 * @param array $instance Widget instance.
+	 * @return array
+	 */
+	public function modify_instance( $instance ) {
+		if ( empty( $instance['text'] ) ) {
+			if ( isset( $instance['title'] ) ) {
+				$instance['text'] = $instance['title'];
+			}
 
-            unset( $instance['title'] );
-        }
-        return $instance;
-    }
+			unset( $instance['title'] );
+		}
+		return $instance;
+	}
 }
 
 siteorigin_widget_register( 'rawb-button', __FILE__, 'RAWB_Button_Widget' );
